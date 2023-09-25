@@ -218,6 +218,7 @@ body {
     }
 }
 
+/* INDEX PAGE */
 .cards {
     margin-bottom: 35px;
 
@@ -381,10 +382,192 @@ body {
         line-height: normal;
         letter-spacing: 2.4px;
         text-transform: uppercase;
-        transition: all .15s linear;
+        transition: all 0.15s linear;
 
         &:hover {
             background-color: #0085ff;
+        }
+    }
+}
+
+/* MEMORIALS PAGE */
+.memorials {
+    margin-bottom: 30px;
+
+    &__title {
+        color: #001333;
+        font-family: 'Cormorant Unicase', serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 143.99%;
+        margin-bottom: 10px;
+    }
+
+    &__breadcrubs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        &-link {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 143.99%;
+            padding-left: 15px;
+            position: relative;
+            display: flex;
+
+            &:first-child {
+                padding-left: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: relative;
+                width: 3px;
+                height: 3px;
+                background-color: #001333;
+                border-radius: 50%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &.not-active {
+                font-weight: 700;
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &__filters {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        &-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        &-item {
+            height: 30px;
+            background-color: #eeeef2;
+            padding: 0 10px;
+            color: #001333;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.15s linear;
+
+            &.active {
+                background-color: #001333;
+                color: #fff;
+            }
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px 24px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
+
+        &-img {
+            margin-bottom: 10px;
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            height: 30px;
+            align-items: center;
+        }
+
+        &-text {
+            color: #04294a;
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &.right {
+                font-size: 16px;
+            }
+
+            &.price {
+                font-weight: 600;
+            }
+
+            &.installment-plan {
+                font-weight: 600;
+                color: #0085ff;
+            }
+        }
+
+        &-btn {
+            height: 50px;
+            width: 100%;
+            background-color: #001333;
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: all .15s linear;
+
+            &:hover {
+                background-color: #0085ff;
+            }
+        }
+    }
+
+    &__info {
+        &-text,
+        &-link {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.16px;
+        }
+
+        &-text + &-text {
+            margin-top: 20px;
+        }
+
+        &-link {
+            font-weight: 600;
+            text-decoration: underline;
         }
     }
 }
