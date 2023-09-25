@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
 
     <script defer src="js/main.min.js"></script>
@@ -16,6 +19,171 @@
 
 <body>
 
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a class="header__logo-link" href="#">
+                        <h1 class="header__logo-title">
+                            1data
+                        </h1>
+                    </a>
+                </div>
+
+                <div class="header__buttons">
+                    <button class="header__buttons-btn btn1">конструктор</button>
+                    <button class="header__buttons-btn btn2">не дайте себя обмануть</button>
+                </div>
+
+                <div class="header__right">
+                    <div class="header__location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+                            <path
+                                d="M20 23C18.7639 23 17.5555 22.6334 16.5277 21.9467C15.4999 21.2599 14.6988 20.2838 14.2258 19.1418C13.7527 17.9997 13.6289 16.7431 13.8701 15.5307C14.1113 14.3183 14.7065 13.2047 15.5806 12.3306C16.4547 11.4565 17.5683 10.8613 18.7807 10.6201C19.9931 10.3789 21.2497 10.5027 22.3918 10.9758C23.5338 11.4488 24.5099 12.2499 25.1967 13.2777C25.8834 14.3055 26.25 15.5139 26.25 16.75C26.248 18.407 25.5889 19.9956 24.4172 21.1672C23.2456 22.3389 21.657 22.998 20 23ZM20 13C19.2583 13 18.5333 13.2199 17.9166 13.632C17.2999 14.044 16.8193 14.6297 16.5355 15.3149C16.2516 16.0002 16.1774 16.7542 16.3221 17.4816C16.4668 18.209 16.8239 18.8772 17.3484 19.4017C17.8728 19.9261 18.541 20.2833 19.2684 20.4279C19.9958 20.5726 20.7498 20.4984 21.4351 20.2146C22.1203 19.9307 22.706 19.4501 23.118 18.8334C23.5301 18.2167 23.75 17.4917 23.75 16.75C23.749 15.7557 23.3536 14.8025 22.6506 14.0994C21.9475 13.3964 20.9943 13.001 20 13Z"
+                                fill="white" />
+                            <path
+                                d="M20 38L9.45501 25.5638C9.30849 25.377 9.16349 25.1891 9.02001 25C7.21874 22.6272 6.24565 19.729 6.25001 16.75C6.25001 13.1033 7.69867 9.60591 10.2773 7.02728C12.8559 4.44866 16.3533 3 20 3C23.6467 3 27.1441 4.44866 29.7227 7.02728C32.3014 9.60591 33.75 13.1033 33.75 16.75C33.7544 19.7277 32.7817 22.6246 30.9813 24.9963L30.98 25C30.98 25 30.605 25.4925 30.5488 25.5588L20 38ZM11.015 23.4938C11.0175 23.4938 11.3075 23.8787 11.3738 23.9612L20 34.135L28.6375 23.9475C28.6925 23.8787 28.985 23.4913 28.9863 23.49C30.4577 21.5514 31.2529 19.1838 31.25 16.75C31.25 13.7663 30.0647 10.9048 27.955 8.79505C25.8452 6.68526 22.9837 5.5 20 5.5C17.0163 5.5 14.1548 6.68526 12.0451 8.79505C9.93528 10.9048 8.75001 13.7663 8.75001 16.75C8.74739 19.1853 9.54224 21.5543 11.015 23.4938Z"
+                                fill="white" />
+                        </svg>
+
+                        <select class="header__location-select">
+                            <option value="Минск">Минск</option>
+                            <option value="Брест">Брест</option>
+                            <option value="Витебск">Витебск</option>
+                            <option value="Гомель">Гомель</option>
+                            <option value="Гродно">Гродно</option>
+                            <option value="Могилёв">Могилёв</option>
+                        </select>
+                    </div>
+
+                    <div class="header__phone">
+                        <a class="header__phone-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41"
+                                fill="none">
+                                <path
+                                    d="M22.458 22.958C19.292 26.122 15.624 29.15 14.174 27.7C12.1 25.626 10.82 23.818 6.244 27.496C1.67 31.172 5.184 33.624 7.194 35.632C9.514 37.952 18.162 35.756 26.71 27.21C35.256 18.662 37.446 10.014 35.124 7.694C33.114 5.682 30.674 2.17 26.998 6.744C23.32 11.318 25.126 12.598 27.204 14.674C28.648 16.124 25.622 19.792 22.458 22.958Z"
+                                    fill="#001333" stroke="white" stroke-width="2.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="header__login">
+                        <svg width="26" height="37" viewBox="0 0 26 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.11102 21.5002V20.3891C4.11102 16.7072 7.09582 13.7224 10.7778 13.7224H15.2223C18.9042 13.7224 21.889 16.7072 21.889 20.3891V21.5002"
+                                stroke="white" stroke-width="2" stroke-linecap="round" />
+                            <path
+                                d="M13.0002 10.3887C10.5455 10.3887 8.55566 8.39887 8.55566 5.94425C8.55566 3.48962 10.5455 1.49976 13.0002 1.49976C15.4547 1.49976 17.4446 3.48962 17.4446 5.94425C17.4446 8.39887 15.4547 10.3887 13.0002 10.3887Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" />
+                            <path
+                                d="M1.2 33.5002V26.3002H4.055C4.54167 26.3002 4.94 26.3986 5.25 26.5952C5.56333 26.7886 5.795 27.0369 5.945 27.3402C6.09833 27.6436 6.175 27.9569 6.175 28.2802C6.175 28.6769 6.08 29.0136 5.89 29.2902C5.70333 29.5669 5.44833 29.7536 5.125 29.8502V29.6002C5.57833 29.7036 5.92167 29.9186 6.155 30.2452C6.39167 30.5719 6.51 30.9436 6.51 31.3602C6.51 31.7869 6.42833 32.1602 6.265 32.4802C6.10167 32.8002 5.85833 33.0502 5.535 33.2302C5.215 33.4102 4.81833 33.5002 4.345 33.5002H1.2ZM2.42 32.3652H4.195C4.405 32.3652 4.59333 32.3236 4.76 32.2402C4.92667 32.1536 5.05667 32.0336 5.15 31.8802C5.24667 31.7236 5.295 31.5386 5.295 31.3252C5.295 31.1319 5.25333 30.9586 5.17 30.8052C5.08667 30.6519 4.965 30.5302 4.805 30.4402C4.645 30.3469 4.45333 30.3002 4.23 30.3002H2.42V32.3652ZM2.42 29.1752H4.04C4.21333 29.1752 4.36833 29.1419 4.505 29.0752C4.64167 29.0086 4.75 28.9102 4.83 28.7802C4.91 28.6502 4.95 28.4902 4.95 28.3002C4.95 28.0502 4.87 27.8419 4.71 27.6752C4.55 27.5086 4.32667 27.4252 4.04 27.4252H2.42V29.1752ZM6.90859 33.5002L8.88359 30.7702L6.94859 28.1002H8.36859L9.58359 29.8252L10.7786 28.1002H12.1986L10.2636 30.7702L12.2486 33.5002H10.8286L9.58359 31.7152L8.32859 33.5002H6.90859ZM15.2354 33.6502C14.6954 33.6502 14.2237 33.5286 13.8204 33.2852C13.4171 33.0419 13.1037 32.7069 12.8804 32.2802C12.6604 31.8502 12.5504 31.3569 12.5504 30.8002C12.5504 30.2336 12.6637 29.7369 12.8904 29.3102C13.1171 28.8836 13.4321 28.5502 13.8354 28.3102C14.2387 28.0702 14.7054 27.9502 15.2354 27.9502C15.7787 27.9502 16.2521 28.0719 16.6554 28.3152C17.0587 28.5586 17.3721 28.8952 17.5954 29.3252C17.8187 29.7519 17.9304 30.2436 17.9304 30.8002C17.9304 31.3602 17.8171 31.8552 17.5904 32.2852C17.3671 32.7119 17.0537 33.0469 16.6504 33.2902C16.2471 33.5302 15.7754 33.6502 15.2354 33.6502ZM15.2354 32.5202C15.7154 32.5202 16.0721 32.3602 16.3054 32.0402C16.5387 31.7202 16.6554 31.3069 16.6554 30.8002C16.6554 30.2769 16.5371 29.8602 16.3004 29.5502C16.0637 29.2369 15.7087 29.0802 15.2354 29.0802C14.9121 29.0802 14.6454 29.1536 14.4354 29.3002C14.2287 29.4436 14.0754 29.6452 13.9754 29.9052C13.8754 30.1619 13.8254 30.4602 13.8254 30.8002C13.8254 31.3236 13.9437 31.7419 14.1804 32.0552C14.4204 32.3652 14.7721 32.5202 15.2354 32.5202ZM18.632 34.7002V32.5552C18.9254 32.5552 19.1337 32.4552 19.257 32.2552C19.3804 32.0552 19.4787 31.7086 19.552 31.2152C19.5987 30.9219 19.637 30.6119 19.667 30.2852C19.697 29.9586 19.722 29.6136 19.742 29.2502C19.7654 28.8869 19.7854 28.5036 19.802 28.1002H23.822V32.5552H24.367V34.7002H23.227V33.5002H19.767V34.7002H18.632ZM20.247 32.5552H22.622V29.0452H20.857C20.847 29.2452 20.8354 29.4502 20.822 29.6602C20.8087 29.8669 20.7937 30.0736 20.777 30.2802C20.7604 30.4869 20.742 30.6852 20.722 30.8752C20.7054 31.0619 20.6854 31.2352 20.662 31.3952C20.6254 31.6752 20.5804 31.9052 20.527 32.0852C20.4737 32.2652 20.3804 32.4219 20.247 32.5552Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <div class="navigation__box">
+                <div class="navigation__wrapper swiper">
+                    <ul class="navigation__list swiper-wrapper">
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Каталог памятников
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Художественное оформление
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Благоустройство
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Рассрочки и кредиты
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                О вечном граните
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Юридические вопросы
+                            </a>
+                        </li>
+                        <li class="navigation__list-item swiper-slide">
+                            <a class="navigation__list-link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-button-prev">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 7L9 12.5L15 18" stroke="#001333" stroke-width="2" stroke-linecap="square" />
+                            <rect x="-0.5" y="-0.5" width="24" height="24"
+                                transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 24 24)" stroke="#CFD8E0" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18L16 12.5L10 7" stroke="#001333" stroke-width="2" stroke-linecap="square" />
+                            <rect x="0.5" y="0.5" width="24" height="24" transform="matrix(0 1 1 0 0 0)"
+                                stroke="#CFD8E0" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="cards">
+            <div class="container">
+                <h2 class="cards__title">
+                    Памятники из гранита в рассрочку без предоплаты
+                </h2>
+
+                <div class="cards__breadcrumbs">
+                    Главная
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Navigation arrows
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
