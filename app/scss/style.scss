@@ -53,6 +53,10 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 0;
+
+    &.overflow {
+        overflow-y: hidden;
+    }
 }
 
 .container {
@@ -121,6 +125,7 @@ body {
 
             &:hover {
                 background-color: #0085ff;
+                border-color: #0085ff;
             }
 
             &.btn1 {
@@ -139,21 +144,35 @@ body {
         width: 100%;
     }
 
-    &__location {
-        gap: 2px;
+    &__phone {
+        cursor: pointer;
+    }
 
-        &-select {
-            border: none;
-            background-color: #001333;
+    &__location {
+        gap: 10px;
+
+        &-city {
             color: #fff;
-            text-align: center;
             font-family: 'Manrope', sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            outline: none;
+            padding-right: 20px;
+            position: relative;
             cursor: pointer;
+            width: min-content;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                background: url(../images/triangle.svg) no-repeat center/cover;
+            }
         }
     }
 
@@ -390,6 +409,202 @@ body {
     }
 }
 
+.contacts-modal {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: -100%;
+    transition: all 0.3s linear;
+
+    &.active {
+        top: 0;
+    }
+
+    &__info {
+        background-color: #fff;
+        z-index: 10000;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+
+        &-phone,
+        &-email {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration-line: underline;
+        }
+
+        &-socials {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-social {
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #001333;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.cities-modal {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: -100%;
+    transition: all 0.3s linear;
+
+    &.active {
+        top: 0;
+    }
+
+    &__info {
+        background-color: #fff;
+        z-index: 10000;
+        padding: 40px;
+        position: relative;
+        max-width: 485px;
+        width: 100%;
+
+        &-wrapper {
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        &-title {
+            color: #001333;
+            font-family: 'Cormorant Unicase', serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 143.99%;
+            margin-bottom: 10px;
+        }
+
+        &-input {
+            padding: 0 10px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #001333;
+            height: 48px;
+            width: 100%;
+            border: 1px solid #cfd8e0;
+            margin-bottom: 15px;
+
+            &::placeholder {
+                color: #5a7794;
+            }
+        }
+
+        &-text {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+            margin-bottom: 30px;
+        }
+
+        &-items {
+            height: 211px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #eeeef2;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #cfd8e0;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+
+        &-item {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+        }
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
 /* MEMORIALS PAGE */
 .memorials {
     margin-bottom: 30px;
@@ -541,7 +756,7 @@ body {
             letter-spacing: 2.4px;
             text-transform: uppercase;
             margin-top: 10px;
-            transition: all .15s linear;
+            transition: all 0.15s linear;
 
             &:hover {
                 background-color: #0085ff;
