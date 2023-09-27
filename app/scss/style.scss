@@ -66,6 +66,50 @@ body {
     padding: 0 20px;
 }
 
+.breadcrumbs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    &-link {
+        color: #001333;
+        font-family: 'Manrope', sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 143.99%;
+        padding-left: 15px;
+        position: relative;
+        display: flex;
+
+        &:first-child {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: relative;
+            width: 3px;
+            height: 3px;
+            background-color: #001333;
+            border-radius: 50%;
+            left: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.not-active {
+            font-weight: 700;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    }
+}
+
 .header {
     padding: 15px 0;
     background-color: #001333;
@@ -186,13 +230,7 @@ body {
 
     &__box {
         position: relative;
-    }
-
-    &__wrapper {
-        max-width: 1030px;
-        width: 100%;
-        margin: 0 auto;
-        position: static;
+        padding: 0 40px;
 
         .swiper-button-next,
         .swiper-button-prev {
@@ -213,6 +251,13 @@ body {
         .swiper-button-prev {
             left: 0;
         }
+    }
+
+    &__wrapper {
+        max-width: 1030px;
+        width: 100%;
+        margin: 0 auto;
+        position: static;
     }
 
     &__list {
@@ -619,50 +664,6 @@ body {
         margin-bottom: 10px;
     }
 
-    &__breadcrubs {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 15px;
-
-        &-link {
-            color: #001333;
-            font-family: 'Manrope', sans-serif;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 143.99%;
-            padding-left: 15px;
-            position: relative;
-            display: flex;
-
-            &:first-child {
-                padding-left: 0;
-
-                &::before {
-                    display: none;
-                }
-            }
-
-            &::before {
-                content: '';
-                position: relative;
-                width: 3px;
-                height: 3px;
-                background-color: #001333;
-                border-radius: 50%;
-                left: -7px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            &.not-active {
-                font-weight: 700;
-                pointer-events: none;
-                cursor: not-allowed;
-            }
-        }
-    }
-
     &__filters {
         display: flex;
         flex-direction: column;
@@ -784,5 +785,203 @@ body {
             font-weight: 600;
             text-decoration: underline;
         }
+    }
+}
+
+/* Detail Memorial page */
+.detail {
+    padding-top: 14px;
+
+    &__installment {
+        &-title {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            margin-bottom: 5px;
+        }
+
+        &-items {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        &-item {
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 143.99%;
+            padding: 5px 10px;
+
+            &.mon6 {
+                background-color: #f4be00;
+            }
+
+            &.mon12 {
+                background-color: #eb8d36;
+            }
+
+            &.mon36 {
+                background-color: #db1e32;
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        &__img {
+            max-width: 550px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        &__info {
+            margin-top: auto;
+            max-width: 360px;
+            width: 100%;
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 3px 10px;
+            }
+
+            &-text {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                &.bold {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                &.installment {
+                    font-size: 16px;
+                }
+            }
+
+            &-bluetext {
+                margin-top: 10px;
+                margin-bottom: 4px;
+                color: #0085ff;
+                font-family: 'Manrope', sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                padding: 0 10px;
+            }
+
+            &-options {
+                display: flex;
+                gap: 20px;
+                padding: 5px 10px;
+            }
+
+            &-option {
+                padding: 5px 10px;
+                background-color: #eeeef2;
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+
+                &.active {
+                    background-color: #001333;
+                    color: #fff;
+                }
+            }
+
+            &-btn {
+                width: 100%;
+                height: 46px;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.32px;
+                text-transform: uppercase;
+
+                &.order {
+                    margin-top: 14px;
+                    background-color: #001333;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+
+                &.change-compl {
+                    background-color: #fff;
+                    border: 1px solid #001333;
+                    color: #001333;
+                }
+            }
+        }
+    }
+
+    .tabs {
+        &__btns {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        &__btn {
+            height: 32px;
+            background-color: #eeeef2;
+            padding: 0 10px;
+            color: #001333;
+            text-align: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            transition: all 0.15s linear;
+
+            &.active {
+                background-color: #001333;
+                color: #fff;
+            }
+        }
+
+        &__info {
+            &-item {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &-text {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.16px;
+            }
+        }
+    }
+
+    .tabs__info-text + .tabs__info-text {
+        margin-top: 20px;
     }
 }
