@@ -202,6 +202,14 @@
                                 №1
                             </div>
                         </div>
+                        <div class="card__info-row">
+                            <div class="card__info-text">
+                                Материал:
+                            </div>
+                            <div class="card__info-text">
+                                Габбро-диабаз
+                            </div>
+                        </div>
 
                         <div class="card__info-bluetext">
                             Размеры и комплектация:
@@ -241,6 +249,14 @@
                             </div>
                             <div class="card__info-text">
                                 100х40х8х5
+                            </div>
+                        </div>
+                        <div class="card__info-row">
+                            <div class="card__info-text">
+                                Страна происхождения
+                            </div>
+                            <div class="card__info-text">
+                                Россия
                             </div>
                         </div>
                         <div class="card__info-row">
@@ -307,10 +323,15 @@
                     <div class="tabs__info">
                         <div class="tabs__info-item active">
                             <p class="tabs__info-text">
-                                Строгая прямоугольная форма стелы подойдет как для мужчин так и для женщин, детей. Это самая бюджетная комплектация памятника, так как проста в изготовлении, не имеет сложных форм и выполнена в наименьшем размере. Все размеры соответствуют нормам, указанным в законе о размерах захоронений. Материал - габбро-диабаз, из которого изготавливаются наши памятники, гаранитирует долговечное качество.
+                                Строгая прямоугольная форма стелы подойдет как для мужчин так и для женщин, детей. Это
+                                самая бюджетная комплектация памятника, так как проста в изготовлении, не имеет сложных
+                                форм и выполнена в наименьшем размере. Все размеры соответствуют нормам, указанным в
+                                законе о размерах захоронений. Материал - габбро-диабаз, из которого изготавливаются
+                                наши памятники, гаранитирует долговечное качество.
                             </p>
                             <p class="tabs__info-text">
-                                Дополнить комплектацию вашего заказа гранитными аксессуарами вы можете перейдя в “Конструктор” памятников по кнопке “Изменить комплектацию”.
+                                Дополнить комплектацию вашего заказа гранитными аксессуарами вы можете перейдя в
+                                “Конструктор” памятников по кнопке “Изменить комплектацию”.
                             </p>
                         </div>
 
@@ -496,6 +517,27 @@
                 hideCitiesModal();
             }
         })
+    </script>
+
+    <script>
+        const tabsBtns = document.querySelectorAll('.tabs__btn');
+        const tabsInfoItems = document.querySelectorAll('.tabs__info-item');
+
+        const deleteClassActive = (elements) => {
+            elements.forEach(element => element.classList.remove('active'));
+        }
+
+        tabsBtns.forEach((tabBtn, index) => tabBtn.addEventListener('click', () => {
+            // удаляет класс active у всех кнопок
+            deleteClassActive(tabsBtns);
+            // удаляет класс active у всех контейнеров контента
+            deleteClassActive(tabsInfoItems);
+
+            // добавляет нажатой кнопке класс active
+            tabBtn.classList.add('active');
+            // добавляет класс active контенту согласно индекса нажатой кнопки
+            tabsInfoItems[index].classList.add('active');
+        }));
     </script>
 </body>
 
