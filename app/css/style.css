@@ -669,11 +669,11 @@ body.overflow {
   transform: scale(1.15);
 }
 
-/* MEMORIALS PAGE */
-.memorials {
+/* catalog PAGE */
+.catalog {
   margin-bottom: 30px;
 }
-.memorials__title {
+.catalog__title {
   color: #001333;
   font-family: "Cormorant Unicase", serif;
   font-size: 32px;
@@ -682,7 +682,7 @@ body.overflow {
   line-height: 143.99%;
   margin-bottom: 10px;
 }
-.memorials__filters {
+.catalog__filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -691,15 +691,15 @@ body.overflow {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
-.memorials__filters-row {
+.catalog__filters-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.memorials__filters-item {
+.catalog__filters-item a {
   height: 30px;
   background-color: #eeeef2;
   padding: 0 10px;
@@ -720,26 +720,26 @@ body.overflow {
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-.memorials__filters-item.active {
+.catalog__filters-item.active a {
   background-color: #001333;
   color: #fff;
 }
-.memorials__items {
+.catalog__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px 24px;
   margin-bottom: 30px;
 }
-.memorials__item {
+.catalog__item {
   padding: 10px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
   box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
 }
-.memorials__item-img {
+.catalog__item-img {
   margin-bottom: 10px;
 }
-.memorials__item-info {
+.catalog__item-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,7 +752,7 @@ body.overflow {
   -ms-flex-align: center;
   align-items: center;
 }
-.memorials__item-text {
+.catalog__item-text {
   color: #04294a;
   font-family: "Manrope", sans-serif;
   font-size: 14px;
@@ -760,17 +760,23 @@ body.overflow {
   font-weight: 400;
   line-height: normal;
 }
-.memorials__item-text.right {
-  font-size: 16px;
-}
-.memorials__item-text.price {
+.catalog__item-text.bold {
   font-weight: 600;
 }
-.memorials__item-text.installment-plan {
+.catalog__item-text.right {
+  font-size: 16px;
+}
+.catalog__item-text.size {
+  font-size: 12px;
+}
+.catalog__item-text.price {
+  font-weight: 600;
+}
+.catalog__item-text.installment-plan {
   font-weight: 600;
   color: #0085ff;
 }
-.memorials__item-btn {
+.catalog__item-btn {
   height: 50px;
   width: 100%;
   background-color: #001333;
@@ -786,10 +792,10 @@ body.overflow {
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-.memorials__item-btn:hover {
+.catalog__item-btn:hover {
   background-color: #0085ff;
 }
-.memorials__info-text, .memorials__info-link {
+.catalog__info-text, .catalog__info-link {
   color: #001333;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -798,15 +804,15 @@ body.overflow {
   line-height: normal;
   letter-spacing: 0.16px;
 }
-.memorials__info-text + .memorials__info-text {
+.catalog__info-text + .catalog__info-text {
   margin-top: 20px;
 }
-.memorials__info-link {
+.catalog__info-link {
   font-weight: 600;
   text-decoration: underline;
 }
 
-/* Detail Memorial page */
+/* Detail page */
 .detail {
   padding-top: 14px;
 }

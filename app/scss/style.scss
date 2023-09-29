@@ -650,8 +650,8 @@ body {
     }
 }
 
-/* MEMORIALS PAGE */
-.memorials {
+/* catalog PAGE */
+.catalog {
     margin-bottom: 30px;
 
     &__title {
@@ -668,7 +668,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 24px;
 
         &-row {
             display: flex;
@@ -676,22 +676,26 @@ body {
         }
 
         &-item {
-            height: 30px;
-            background-color: #eeeef2;
-            padding: 0 10px;
-            color: #001333;
-            text-align: center;
-            font-family: Manrope;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            transition: all 0.15s linear;
 
-            &.active {
+            a {
+                height: 30px;
+                background-color: #eeeef2;
+                padding: 0 10px;
+                color: #001333;
+                text-align: center;
+                font-family: Manrope;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transition: all 0.15s linear;
+            }
+            
+
+            &.active a {
                 background-color: #001333;
                 color: #fff;
             }
@@ -730,8 +734,16 @@ body {
             font-weight: 400;
             line-height: normal;
 
+            &.bold {
+                font-weight: 600;
+            }
+
             &.right {
                 font-size: 16px;
+            }
+
+            &.size {
+                font-size: 12px;
             }
 
             &.price {
@@ -788,7 +800,7 @@ body {
     }
 }
 
-/* Detail Memorial page */
+/* Detail page */
 .detail {
     padding-top: 14px;
 
