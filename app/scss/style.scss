@@ -350,6 +350,8 @@ body {
 }
 
 .info {
+    margin-bottom: 55px;
+
     &__title {
         color: #001333;
         font-family: 'Manrope', sans-serif;
@@ -652,7 +654,7 @@ body {
 
 /* catalog PAGE */
 .catalog {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 
     &__title {
         color: #001333;
@@ -676,7 +678,6 @@ body {
         }
 
         &-item {
-
             a {
                 height: 30px;
                 background-color: #eeeef2;
@@ -693,7 +694,6 @@ body {
                 align-items: center;
                 transition: all 0.15s linear;
             }
-            
 
             &.active a {
                 background-color: #001333;
@@ -806,6 +806,7 @@ body {
 /* Detail page */
 .detail {
     padding-top: 14px;
+    margin-bottom: 55px;
 
     &__installment {
         &-title {
@@ -998,5 +999,91 @@ body {
 
     .tabs__info-text + .tabs__info-text {
         margin-top: 20px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #001333;
+    padding: 20px 0 25px;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__logo {
+        &-title {
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            letter-spacing: -1.28px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__phone,
+    &__email,
+    &__oferta {
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        display: inline-block;
+    }
+
+    &__phone,
+    &__email {
+        margin-bottom: 4px;
+    }
+
+    &__oferta {
+        margin-bottom: 20px;
+    }
+
+    &__copy {
+        display: flex;
+        gap: 4px;
+
+        &-text {
+            color: #fff;
+            font-family: Arial;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__col {
+        width: 100%;
+
+        &.col1 {
+            max-width: 170px;
+            margin-right: 115px;
+        }
+
+        &.col2 {
+            max-width: 370px;
+            margin-right: 12px;
+        }
+
+        &.col3 {
+            max-width: 425px;
+        }
+
+        &-text {
+            color: #fff;
+            font-family: Arial;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
     }
 }
