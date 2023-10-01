@@ -741,6 +741,7 @@ body.overflow {
 }
 .catalog__item-img {
   margin-bottom: 10px;
+  height: 243px;
 }
 .catalog__item-info {
   display: -webkit-box;
