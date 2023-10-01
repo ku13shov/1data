@@ -791,6 +791,15 @@ body.overflow {
   margin-top: 10px;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .catalog__item-btn:hover {
   background-color: #0085ff;
@@ -875,7 +884,7 @@ body.overflow {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 10px;
-  padding: 3px 10px;
+  padding: 2.5px 10px;
 }
 .detail .card__info-text {
   color: #001333;

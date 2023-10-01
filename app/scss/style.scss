@@ -770,6 +770,9 @@ body {
             text-transform: uppercase;
             margin-top: 10px;
             transition: all 0.15s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover {
                 background-color: #0085ff;
@@ -864,7 +867,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 gap: 10px;
-                padding: 3px 10px;
+                padding: 2.5px 10px;
             }
 
             &-text {
