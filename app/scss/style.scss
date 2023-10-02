@@ -163,7 +163,6 @@ body {
             width: 100%;
             padding: 0 10px;
             color: #fff;
-            text-align: center;
             font-family: 'Manrope', sans-serif;
             font-size: 16px;
             font-style: normal;
@@ -172,6 +171,14 @@ body {
             letter-spacing: 2.4px;
             text-transform: uppercase;
             transition: all 0.15s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                background-color: #0085ff;
+                border-color: #0085ff;
+            }
 
             &:hover {
                 background-color: #0085ff;
@@ -537,7 +544,8 @@ body {
     z-index: 999;
 }
 
-.cities-modal {
+.cities-modal,
+.fooled-modal {
     position: absolute;
     left: 0;
     width: 100%;
@@ -1119,6 +1127,231 @@ body {
             line-height: normal;
             letter-spacing: 0.16px;
             margin-top: 24px;
+        }
+    }
+}
+
+/* Dont be fooled page */
+.fooled {
+    margin-bottom: 55px;
+
+    &__title,
+    &__text {
+        color: #001333;
+        font-family: 'Cormorant Unicase', serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 143.99%;
+    }
+
+    &__text {
+        line-height: 113.49%;
+        margin-bottom: 20px;
+    }
+
+    &__redtext {
+        color: #db1e32;
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 143.99%;
+        margin-bottom: 10px;
+
+        span {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 45px;
+
+        &-link {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 36px;
+            background-color: #fff;
+            padding: 0 20px;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2.4px;
+
+            &.red {
+                background-color: #db1e32;
+            }
+
+            &.purple {
+                background-color: #9747ff;
+            }
+
+            &.white {
+                border: 1px solid #001333;
+                color: #001333;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        &-link {
+            transition: all 0.15s linear;
+
+            &:hover .fooled__item-title {
+                color: #0085ff;
+            }
+        }
+    }
+
+    &__item {
+        max-width: 356px;
+        width: 100%;
+        box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
+
+        &-title {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 19.2px */
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            max-width: 330px;
+            width: 100%;
+
+            &.active {
+                color: #0085ff;
+            }
+        }
+    }
+
+    &__info {
+        &-text {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.16px;
+
+            &.super-bold {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 143.99%;
+                margin-bottom: 24px;
+            }
+
+            &.bold {
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            a {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.16px;
+                text-decoration-line: underline;
+            }
+        }
+
+        &-list {
+            margin-bottom: 15px;
+
+            li {
+                list-style: disc;
+                list-style-position: inside;
+
+                &::marker {
+                    font-size: 12px;
+                }
+            }
+
+            li + li {
+                margin-top: 15px;
+            }
+
+            &.no-margin {
+                li {
+                    margin: 0;
+                }
+            }
+        }
+
+        &-text + &-text {
+            margin-top: 24px;
+        }
+
+        .mb15 {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.fooled-modal {
+    &__info {
+        max-width: 920px;
+        width: 100%;
+        padding: 60px 50px 95px 50px;
+
+        &-title {
+            color: #001333;
+            font-family: 'Cormorant Unicase', serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 143.99%;
+            text-align: center;
+            margin-bottom: 26px;
+        }
+
+        &-text {
+            margin-bottom: 0;
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.16px;
+            padding-left: 24px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #001333;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        }
+
+        &-text + &-text {
+            margin-top: 20px;
         }
     }
 }

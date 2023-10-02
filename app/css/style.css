@@ -174,7 +174,6 @@ body.overflow {
   width: 100%;
   padding: 0 10px;
   color: #fff;
-  text-align: center;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -184,6 +183,19 @@ body.overflow {
   text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.header__buttons-btn.active {
+  background-color: #0085ff;
+  border-color: #0085ff;
 }
 .header__buttons-btn:hover {
   background-color: #0085ff;
@@ -549,7 +561,8 @@ body.overflow {
   z-index: 999;
 }
 
-.cities-modal {
+.cities-modal,
+.fooled-modal {
   position: absolute;
   left: 0;
   width: 100%;
@@ -568,10 +581,12 @@ body.overflow {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.cities-modal.active {
+.cities-modal.active,
+.fooled-modal.active {
   top: 0;
 }
-.cities-modal__info {
+.cities-modal__info,
+.fooled-modal__info {
   background-color: #fff;
   z-index: 10000;
   padding: 40px;
@@ -579,12 +594,14 @@ body.overflow {
   max-width: 485px;
   width: 100%;
 }
-.cities-modal__info-wrapper {
+.cities-modal__info-wrapper,
+.fooled-modal__info-wrapper {
   margin: 0 auto;
   max-width: 300px;
   width: 100%;
 }
-.cities-modal__info-title {
+.cities-modal__info-title,
+.fooled-modal__info-title {
   color: #001333;
   font-family: "Cormorant Unicase", serif;
   font-size: 32px;
@@ -593,7 +610,8 @@ body.overflow {
   line-height: 143.99%;
   margin-bottom: 10px;
 }
-.cities-modal__info-input {
+.cities-modal__info-input,
+.fooled-modal__info-input {
   padding: 0 10px;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -606,22 +624,28 @@ body.overflow {
   border: 1px solid #cfd8e0;
   margin-bottom: 15px;
 }
-.cities-modal__info-input::-webkit-input-placeholder {
+.cities-modal__info-input::-webkit-input-placeholder,
+.fooled-modal__info-input::-webkit-input-placeholder {
   color: #5a7794;
 }
-.cities-modal__info-input::-moz-placeholder {
+.cities-modal__info-input::-moz-placeholder,
+.fooled-modal__info-input::-moz-placeholder {
   color: #5a7794;
 }
-.cities-modal__info-input:-ms-input-placeholder {
+.cities-modal__info-input:-ms-input-placeholder,
+.fooled-modal__info-input:-ms-input-placeholder {
   color: #5a7794;
 }
-.cities-modal__info-input::-ms-input-placeholder {
+.cities-modal__info-input::-ms-input-placeholder,
+.fooled-modal__info-input::-ms-input-placeholder {
   color: #5a7794;
 }
-.cities-modal__info-input::placeholder {
+.cities-modal__info-input::placeholder,
+.fooled-modal__info-input::placeholder {
   color: #5a7794;
 }
-.cities-modal__info-text {
+.cities-modal__info-text,
+.fooled-modal__info-text {
   color: #001333;
   font-family: "Manrope", sans-serif;
   font-size: 10px;
@@ -631,7 +655,8 @@ body.overflow {
   letter-spacing: 0.1px;
   margin-bottom: 30px;
 }
-.cities-modal__info-items {
+.cities-modal__info-items,
+.fooled-modal__info-items {
   height: 211px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,24 +668,28 @@ body.overflow {
   gap: 5px;
   overflow-y: scroll;
 }
-.cities-modal__info-items::-webkit-scrollbar {
+.cities-modal__info-items::-webkit-scrollbar,
+.fooled-modal__info-items::-webkit-scrollbar {
   width: 6px;
 }
-.cities-modal__info-items::-webkit-scrollbar-track {
+.cities-modal__info-items::-webkit-scrollbar-track,
+.fooled-modal__info-items::-webkit-scrollbar-track {
   background-color: #eeeef2;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.cities-modal__info-items::-webkit-scrollbar-thumb {
+.cities-modal__info-items::-webkit-scrollbar-thumb,
+.fooled-modal__info-items::-webkit-scrollbar-thumb {
   background-color: #cfd8e0;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.cities-modal__info-item {
+.cities-modal__info-item,
+.fooled-modal__info-item {
   color: #001333;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -669,7 +698,8 @@ body.overflow {
   line-height: normal;
   cursor: pointer;
 }
-.cities-modal__info-close {
+.cities-modal__info-close,
+.fooled-modal__info-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -677,7 +707,8 @@ body.overflow {
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-.cities-modal__info-close:hover {
+.cities-modal__info-close:hover,
+.fooled-modal__info-close:hover {
   -webkit-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
@@ -1123,6 +1154,208 @@ body.overflow {
   line-height: normal;
   letter-spacing: 0.16px;
   margin-top: 24px;
+}
+
+/* Dont be fooled page */
+.fooled {
+  margin-bottom: 55px;
+}
+.fooled__title, .fooled__text {
+  color: #001333;
+  font-family: "Cormorant Unicase", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 143.99%;
+}
+.fooled__text {
+  line-height: 113.49%;
+  margin-bottom: 20px;
+}
+.fooled__redtext {
+  color: #db1e32;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 143.99%;
+  margin-bottom: 10px;
+}
+.fooled__redtext span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fooled__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 45px;
+}
+.fooled__links-link {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 36px;
+  background-color: #fff;
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.4px;
+}
+.fooled__links-link.red {
+  background-color: #db1e32;
+}
+.fooled__links-link.purple {
+  background-color: #9747ff;
+}
+.fooled__links-link.white {
+  border: 1px solid #001333;
+  color: #001333;
+}
+.fooled__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.fooled__items-link {
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.fooled__items-link:hover .fooled__item-title {
+  color: #0085ff;
+}
+.fooled__item {
+  max-width: 356px;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
+  box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
+}
+.fooled__item-title {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  max-width: 330px;
+  width: 100%;
+}
+.fooled__item-title.active {
+  color: #0085ff;
+}
+.fooled__info-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+.fooled__info-text.super-bold {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 143.99%;
+  margin-bottom: 24px;
+}
+.fooled__info-text.bold {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.fooled__info-text a {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  text-decoration-line: underline;
+}
+.fooled__info-list {
+  margin-bottom: 15px;
+}
+.fooled__info-list li {
+  list-style: disc;
+  list-style-position: inside;
+}
+.fooled__info-list li::marker {
+  font-size: 12px;
+}
+.fooled__info-list li + li {
+  margin-top: 15px;
+}
+.fooled__info-list.no-margin li {
+  margin: 0;
+}
+.fooled__info-text + .fooled__info-text {
+  margin-top: 24px;
+}
+.fooled__info .mb15 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.fooled-modal__info {
+  max-width: 920px;
+  width: 100%;
+  padding: 60px 50px 95px 50px;
+}
+.fooled-modal__info-title {
+  color: #001333;
+  font-family: "Cormorant Unicase", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 143.99%;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.fooled-modal__info-text {
+  margin-bottom: 0;
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  padding-left: 24px;
+  position: relative;
+}
+.fooled-modal__info-text::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #001333;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 10px;
+}
+.fooled-modal__info-text + .fooled-modal__info-text {
+  margin-top: 20px;
 }
 
 /* Footer */
