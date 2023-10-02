@@ -12,6 +12,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="js/swiper.js"></script>
+    <script defer src="js/cookie.js"></script>
+    <script defer src="js/contactsModal.js"></script>
+    <script defer src="js/citiesModal.js"></script>
+
     <title>1Data</title>
 </head>
 
@@ -531,83 +538,6 @@
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        // Слайдер в меню
-        const swiper = new Swiper('.swiper', {
-            spaceBetween: 20,
-            slidesPerView: 'auto',
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-
-    <script>
-        const cookiePopup = document.querySelector('.cookie');
-        const cookieBtn = document.querySelector('.cookie__btn');
-        const headerPhone = document.querySelector('.header__phone');
-        const body = document.querySelector('body');
-        const contactsModal = document.querySelector('.contacts-modal');
-        const contactsOverlay = document.querySelector('.contacts-modal .overlay');
-        const contactsModalClose = document.querySelector('.contacts-modal__info-close');
-        const headerLocation = document.querySelector('.header__location-city');
-        const citiesModal = document.querySelector('.cities-modal');
-        const citiesOverlay = document.querySelector('.cities-modal .overlay');
-        const citiesModalClose = document.querySelector('.cities-modal__info-close');
-        const citiesParent = document.querySelector('.cities-modal__info-items');
-
-        // Проверка, было ли уже показано всплывающее окно
-        if (localStorage.getItem('cookiePopup')) {
-            // Если да, то скрывает его
-            cookiePopup.classList.add('hidden');
-        }
-
-        // Скрывает всплывающее окно при первой загрузке страницы по нажатию на кнопку ОК и сохранает показ в localstorage
-        cookieBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiePopup', 'true');
-            cookiePopup.classList.add('hidden');
-        });
-
-        const showContactsModal = () => {
-            contactsModal.classList.add('active');
-            body.classList.add('overflow');
-        }
-
-        const hideContactsModal = () => {
-            contactsModal.classList.remove('active');
-            body.classList.remove('overflow');
-        }
-
-        headerPhone.addEventListener('click', showContactsModal);
-        contactsOverlay.addEventListener('click', hideContactsModal);
-        contactsModalClose.addEventListener('click', hideContactsModal);
-
-
-        const showCitiesModal = () => {
-            citiesModal.classList.add('active');
-            body.classList.add('overflow');
-        }
-
-        const hideCitiesModal = () => {
-            citiesModal.classList.remove('active');
-            body.classList.remove('overflow');
-        }
-
-        headerLocation.addEventListener('click', showCitiesModal);
-        citiesOverlay.addEventListener('click', hideCitiesModal);
-        citiesModalClose.addEventListener('click', hideCitiesModal);
-
-        citiesParent.addEventListener('click', (e) => {
-            if (e.target.closest('.cities-modal__info-item')) {
-                headerLocation.textContent = e.target.textContent;
-                hideCitiesModal();
-            }
-        })
-    </script>
 </body>
 
 </html>
