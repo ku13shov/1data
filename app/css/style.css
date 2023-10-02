@@ -67,6 +67,17 @@ body.overflow {
   padding: 0 20px;
 }
 
+.content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1004,10 +1015,121 @@ body.overflow {
   margin-top: 20px;
 }
 
+/* About page */
+.about {
+  margin-bottom: 55px;
+}
+.about__title {
+  color: #001333;
+  font-family: "Cormorant Unicase", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 143.99%;
+  margin-bottom: 2px;
+}
+.about__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.about__tabs-item {
+  height: 30px;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #eeeef2;
+  color: #001333;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.about__tabs-item.active {
+  background-color: #001333;
+  color: #fff;
+}
+.about__info-item + .about__info-item {
+  margin-top: 15px;
+}
+.about__info-title {
+  margin-bottom: 15px;
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  padding-left: 24px;
+  position: relative;
+}
+.about__info-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 10px;
+  width: 4px;
+  height: 4px;
+  background-color: #001333;
+  border-radius: 50%;
+}
+.about__info-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+.about__info-text.list-item {
+  padding-left: 24px;
+  position: relative;
+}
+.about__info-text.list-item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+  background-color: #001333;
+  border-radius: 50%;
+}
+.about__info-text + .about__info-text {
+  margin-top: 15px;
+}
+.about__info-attention {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  margin-top: 24px;
+}
+
 /* Footer */
 .footer {
   background-color: #001333;
   padding: 20px 0 25px;
+  margin-top: auto;
 }
 .footer__wrapper {
   display: -webkit-box;
