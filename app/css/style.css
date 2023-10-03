@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -488,7 +489,7 @@ body.overflow {
   -ms-flex-align: center;
   align-items: center;
   z-index: 1000;
-  top: -100%;
+  top: -120%;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -577,7 +578,7 @@ body.overflow {
   -ms-flex-align: center;
   align-items: center;
   z-index: 1000;
-  top: -100%;
+  top: -120%;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -712,6 +713,211 @@ body.overflow {
   -webkit-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
+}
+
+.entrance-modal {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  z-index: 500;
+  top: -120%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background-color: #fff;
+}
+.entrance-modal.active {
+  top: 80px;
+}
+.entrance-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+.entrance-modal__left, .entrance-modal__right {
+  width: 50%;
+  padding: 0 40px;
+}
+.entrance-modal__left {
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.entrance-modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+}
+.entrance-modal__box {
+  max-width: 360px;
+  width: 100%;
+}
+.entrance-modal__title {
+  color: #001333;
+  text-align: center;
+  font-family: "Cormorant Unicase", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin-bottom: 2px;
+}
+.entrance-modal__text {
+  color: #001333;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 30px;
+}
+.entrance-modal__form {
+  text-align: center;
+}
+.entrance-modal__form-input {
+  max-width: 296px;
+  width: 100%;
+  margin-bottom: 13px;
+  height: 48px;
+  padding: 0 20px;
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #cfd8e0;
+  outline-color: #001333;
+}
+.entrance-modal__form-input::-webkit-input-placeholder {
+  color: #5a7794;
+}
+.entrance-modal__form-input::-moz-placeholder {
+  color: #5a7794;
+}
+.entrance-modal__form-input:-ms-input-placeholder {
+  color: #5a7794;
+}
+.entrance-modal__form-input::-ms-input-placeholder {
+  color: #5a7794;
+}
+.entrance-modal__form-input::placeholder {
+  color: #5a7794;
+}
+.entrance-modal__form-checkbox label {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  max-width: 296px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+.entrance-modal__form-checkbox label input {
+  display: none;
+}
+.entrance-modal__form-checkbox label span {
+  height: 18px;
+  width: 18px;
+  border: 1px solid #cfd8e0;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  padding: 3px;
+  background-color: #001333;
+  text-align: center;
+}
+.entrance-modal__form-checkbox label input:checked + span:before {
+  content: "✔";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  left: 0;
+  font-size: 15px;
+  color: #fff;
+}
+.entrance-modal__form-btn {
+  height: 56px;
+  color: #fff;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #001333;
+  max-width: 296px;
+  width: 100%;
+  cursor: pointer;
+}
+.entrance-modal__right {
+  background-color: #001333;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.entrance-modal__right-box {
+  max-width: 600px;
+  width: 100%;
+}
+.entrance-modal__right-text {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  padding-left: 24px;
+  position: relative;
+}
+.entrance-modal__right-text::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 8px;
+  left: 10px;
+}
+.entrance-modal__right-text + .entrance-modal__right-text {
+  margin-top: 26px;
 }
 
 /* catalog PAGE */
