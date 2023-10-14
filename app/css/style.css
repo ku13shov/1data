@@ -402,6 +402,16 @@ body.overflow {
   padding-left: 24px;
   position: relative;
 }
+.info__list-item a {
+  font-family: "Manrope", sans-serif;
+  color: #001333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 210%;
+  letter-spacing: 0.16px;
+  text-decoration-line: underline;
+}
 .info__list-item::before {
   content: "";
   position: absolute;
@@ -478,10 +488,6 @@ body.overflow {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -489,12 +495,9 @@ body.overflow {
   -ms-flex-align: center;
   align-items: center;
   z-index: 1000;
-  top: -120%;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.contacts-modal.active {
   top: 0;
+  height: 100dvh;
+  display: none;
 }
 .contacts-modal__info {
   background-color: #fff;
@@ -567,10 +570,6 @@ body.overflow {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -578,13 +577,9 @@ body.overflow {
   -ms-flex-align: center;
   align-items: center;
   z-index: 1000;
-  top: -120%;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.cities-modal.active,
-.fooled-modal.active {
   top: 0;
+  height: 100vh;
+  display: none;
 }
 .cities-modal__info,
 .fooled-modal__info {
@@ -719,15 +714,11 @@ body.overflow {
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(100vh - 80px);
   z-index: 500;
-  top: -120%;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  background-color: #fff;
-}
-.entrance-modal.active {
   top: 80px;
+  background-color: #fff;
+  display: none;
+  height: calc(100vh - 80px);
 }
 .entrance-modal__wrapper {
   display: -webkit-box;
@@ -1420,16 +1411,28 @@ body.overflow {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.4px;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 .fooled__links-link.red {
   background-color: #db1e32;
 }
+.fooled__links-link.red:hover {
+  background-color: #c20014;
+}
 .fooled__links-link.purple {
   background-color: #9747ff;
+}
+.fooled__links-link.purple:hover {
+  background-color: #7800d7;
 }
 .fooled__links-link.white {
   border: 1px solid #001333;
   color: #001333;
+}
+.fooled__links-link.white:hover {
+  background-color: #001333;
+  color: #fff;
 }
 .fooled__items {
   display: -webkit-box;
@@ -1636,4 +1639,37 @@ body.overflow {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
