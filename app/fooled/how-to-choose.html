@@ -18,7 +18,6 @@
     <script defer src="../js/cookie.js"></script>
     <script defer src="../js/contactsAndCityModals.js"></script>
     <script defer src="../js/entranceModal.js"></script>
-    <script defer src="../js/howToChooseModals.js"></script>
 
     <title>1Data</title>
 </head>
@@ -668,7 +667,8 @@
 
             <div class="article-modal__info-box">
                 <p class="article-modal__info-text">
-                    “Реклама и иные предложения, адресованные неопределенному кругу лиц, рассматриваются как приглашение делать оферты, если иное прямо не указано в предложении”.
+                    “Реклама и иные предложения, адресованные неопределенному кругу лиц, рассматриваются как приглашение
+                    делать оферты, если иное прямо не указано в предложении”.
                 </p>
             </div>
 
@@ -693,7 +693,8 @@
 
             <div class="article-modal__info-box">
                 <p class="article-modal__info-text">
-                    “Гарантийный срок элементов надгробий – 5 лет со дня реализации (или с даты установки в местах захоронений согласно договору)”.
+                    “Гарантийный срок элементов надгробий – 5 лет со дня реализации (или с даты установки в местах
+                    захоронений согласно договору)”.
                 </p>
             </div>
 
@@ -707,6 +708,39 @@
             </svg>
         </div>
     </div>
+
+
+    <script>
+        const art13_3 = document.querySelector('#art13-3');
+        const art168 = document.querySelector('#art168');
+        const art402_1 = document.querySelector('#art402-1');
+        const art407 = document.querySelector('#art407');
+        const stb2007 = document.querySelector('#stb2007');
+
+        const showOrHideArticleModal = (articleElement) => {
+            articleElement.addEventListener('click', () => {
+                const article = document.querySelector(`.article-modal.${articleElement.id}`);
+                const articleOverlay = document.querySelector(`.article-modal.${articleElement.id} .overlay`);
+                const articleClose = document.querySelector(`.article-modal.${articleElement.id} .article-modal__info-close`);
+
+                showModal(article);
+
+                articleOverlay.addEventListener('click', () => {
+                    hideModal(article);
+                });
+
+                articleClose.addEventListener('click', () => {
+                    hideModal(article);
+                });
+            });
+        }
+
+        showOrHideArticleModal(art13_3);
+        showOrHideArticleModal(art168);
+        showOrHideArticleModal(art402_1);
+        showOrHideArticleModal(art407);
+        showOrHideArticleModal(stb2007);
+    </script>
 </body>
 
 </html>

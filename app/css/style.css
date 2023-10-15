@@ -1510,6 +1510,9 @@ body {
   letter-spacing: 0.16px;
   text-decoration-line: underline;
 }
+.fooled__info-text .fooled__info-bluelink {
+  color: #0085ff;
+}
 .fooled__info-list {
   margin-bottom: 15px;
 }
