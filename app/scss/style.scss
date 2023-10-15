@@ -53,10 +53,6 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 0;
-
-    &.overflow {
-        overflow-y: hidden;
-    }
 }
 
 .container {
@@ -75,7 +71,8 @@ body {
 .breadcrumbs {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 
     &-link {
         color: #001333;
@@ -1335,6 +1332,10 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: 143.99%;
+    }
+
+    &__title {
+        margin-bottom: 14px;
     }
 
     &__text {

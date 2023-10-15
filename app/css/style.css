@@ -57,9 +57,6 @@ body {
   margin: 0;
   padding: 0;
 }
-body.overflow {
-  overflow-y: hidden;
-}
 
 .container {
   max-width: 1160px;
@@ -84,7 +81,8 @@ body.overflow {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 .breadcrumbs-link {
   color: #001333;
@@ -1364,6 +1362,9 @@ body.overflow {
   font-style: normal;
   font-weight: 600;
   line-height: 143.99%;
+}
+.fooled__title {
+  margin-bottom: 14px;
 }
 .fooled__text {
   line-height: 113.49%;
