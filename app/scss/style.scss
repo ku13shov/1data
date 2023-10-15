@@ -323,11 +323,18 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 24px 24px;
+
+        a {
+            transition: all 0.15s linear;
+
+            &:hover .cards__item-title {
+                color: #0085ff;
+            }
+        }
     }
 
     &__item {
         box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
-        cursor: pointer;
 
         &-img {
             position: relative;
@@ -1206,7 +1213,7 @@ body {
     }
 }
 
-/* About page */
+/* About pages */
 .about {
     margin-bottom: 55px;
 
@@ -1345,7 +1352,7 @@ body {
     }
 }
 
-/* Dont be fooled page */
+/* Dont be fooled pages */
 .fooled {
     margin-bottom: 55px;
 
@@ -1632,6 +1639,130 @@ body {
 
         &-text + &-text {
             margin-top: 20px;
+        }
+    }
+}
+
+/* legal-issues pages */
+.legally {
+    padding-bottom: 65px;
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__items {
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 34px;
+
+        .cards__item-title {
+            &.active {
+                color: #0085ff;
+            }
+        }
+    }
+
+    &__info-title,
+    &__form-title,
+    &__info-text,
+    &__form-text {
+        color: #001333;
+        font-family: 'Manrope', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.24px;
+    }
+
+    &__info {
+        &-title {
+            margin-bottom: 10px;
+        }
+
+        &-text + &-text {
+            margin-top: 10px;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+
+            &.bold {
+                font-weight: 600;
+            }
+
+            &.mt34 {
+                margin-top: 34px;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 34px;
+
+        &-title {
+            margin-bottom: 10px;
+
+            &.mb15 {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        &-input,
+        &-textarea,
+        &-submit {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #5a7794;
+            background: #fff;
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.16px;
+            outline-color: #0085ff;
+
+            &::placeholder {
+                color: #5a7794;
+            }
+        }
+
+        &-input {
+            height: 50px;
+            padding: 0 30px;
+        }
+
+        &-textarea {
+            height: 215px;
+            resize: none;
+            padding: 15px 30px;
+        }
+
+        &-choose {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &-submit {
+            max-width: 240px;
+            width: 100%;
+            height: 46px;
+            cursor: pointer;
+            background-color: #001333;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
         }
     }
 }

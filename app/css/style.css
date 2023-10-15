@@ -336,10 +336,16 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 24px 24px;
 }
+.cards__items a {
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.cards__items a:hover .cards__item-title {
+  color: #0085ff;
+}
 .cards__item {
   -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
   box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
-  cursor: pointer;
 }
 .cards__item-img {
   position: relative;
@@ -1241,7 +1247,7 @@ body {
   margin-top: 20px;
 }
 
-/* About page */
+/* About pages */
 .about {
   margin-bottom: 55px;
 }
@@ -1372,7 +1378,7 @@ body {
   cursor: pointer;
 }
 
-/* Dont be fooled page */
+/* Dont be fooled pages */
 .fooled {
   margin-bottom: 55px;
 }
@@ -1629,6 +1635,114 @@ body {
 }
 .fooled-modal__info-text + .fooled-modal__info-text {
   margin-top: 20px;
+}
+
+/* legal-issues pages */
+.legally {
+  padding-bottom: 65px;
+}
+.legally__title {
+  margin-bottom: 15px;
+}
+.legally__items {
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 34px;
+}
+.legally__items .cards__item-title.active {
+  color: #0085ff;
+}
+.legally__info-title, .legally__form-title, .legally__info-text, .legally__form-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+.legally__info-title {
+  margin-bottom: 10px;
+}
+.legally__info-text + .legally__info-text {
+  margin-top: 10px;
+}
+.legally__info-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.legally__info-text.bold {
+  font-weight: 600;
+}
+.legally__info-text.mt34 {
+  margin-top: 34px;
+}
+.legally__form {
+  margin-top: 34px;
+}
+.legally__form-title {
+  margin-bottom: 10px;
+}
+.legally__form-title.mb15 {
+  margin-bottom: 15px;
+}
+.legally__form-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.legally__form-input, .legally__form-textarea, .legally__form-submit {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #5a7794;
+  background: #fff;
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  outline-color: #0085ff;
+}
+.legally__form-input::-webkit-input-placeholder, .legally__form-textarea::-webkit-input-placeholder, .legally__form-submit::-webkit-input-placeholder {
+  color: #5a7794;
+}
+.legally__form-input::-moz-placeholder, .legally__form-textarea::-moz-placeholder, .legally__form-submit::-moz-placeholder {
+  color: #5a7794;
+}
+.legally__form-input:-ms-input-placeholder, .legally__form-textarea:-ms-input-placeholder, .legally__form-submit:-ms-input-placeholder {
+  color: #5a7794;
+}
+.legally__form-input::-ms-input-placeholder, .legally__form-textarea::-ms-input-placeholder, .legally__form-submit::-ms-input-placeholder {
+  color: #5a7794;
+}
+.legally__form-input::placeholder, .legally__form-textarea::placeholder, .legally__form-submit::placeholder {
+  color: #5a7794;
+}
+.legally__form-input {
+  height: 50px;
+  padding: 0 30px;
+}
+.legally__form-textarea {
+  height: 215px;
+  resize: none;
+  padding: 15px 30px;
+}
+.legally__form-choose {
+  display: block;
+  margin-bottom: 15px;
+}
+.legally__form-submit {
+  max-width: 240px;
+  width: 100%;
+  height: 46px;
+  cursor: pointer;
+  background-color: #001333;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
 }
 
 .article-modal {
