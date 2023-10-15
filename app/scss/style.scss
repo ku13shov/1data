@@ -481,7 +481,7 @@ body {
 }
 
 .contacts-modal {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     justify-content: center;
@@ -552,7 +552,7 @@ body {
 
 .cities-modal,
 .fooled-modal {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     justify-content: center;
@@ -668,7 +668,7 @@ body {
 }
 
 .entrance-modal {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     z-index: 500;
@@ -1456,11 +1456,23 @@ body {
             line-height: normal;
             letter-spacing: 0.16px;
 
+            span {
+                font-weight: 700;
+                text-decoration-line: underline;
+                cursor: pointer;
+            }
+
             &.super-bold {
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 143.99%;
                 margin-bottom: 24px;
+            }
+
+            &.medium-bold {
+                font-weight: 600;
+                margin-bottom: 24px;
+                font-size: 20px;
             }
 
             &.bold {
@@ -1484,12 +1496,44 @@ body {
             margin-bottom: 15px;
 
             li {
-                list-style: disc;
-                list-style-position: inside;
+                /*list-style: disc;
+                list-style-position: inside;*/
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.16px;
+                position: relative;
+                padding-left: 20px;
 
-                &::marker {
-                    font-size: 12px;
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
                 }
+
+                a {
+                    color: #001333;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.16px;
+                    text-decoration-line: underline;
+                }
+
+                span {
+                    font-weight: 700;
+                    text-decoration-line: underline;
+                    cursor: pointer;
+                }
+
+                /*&::marker {
+                    font-size: 12px;
+                }*/
             }
 
             li + li {
@@ -1558,6 +1602,60 @@ body {
 
         &-text + &-text {
             margin-top: 20px;
+        }
+    }
+}
+
+.article-modal {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+    height: 100vh;
+    display: none;
+
+    &__info {
+        background-color: #fff;
+        z-index: 10000;
+        position: relative;
+        max-width: 920px;
+        width: 100%;
+        padding: 60px 50px;
+
+        &-title {
+            color: #001333;
+            text-align: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 143.99%;
+            margin-bottom: 24px;
+        }
+
+        &-text {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.16px;
+        }
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
         }
     }
 }

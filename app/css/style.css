@@ -485,7 +485,7 @@ body.overflow {
 }
 
 .contacts-modal {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   -webkit-box-pack: center;
@@ -567,7 +567,7 @@ body.overflow {
 
 .cities-modal,
 .fooled-modal {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   -webkit-box-pack: center;
@@ -711,7 +711,7 @@ body.overflow {
 }
 
 .entrance-modal {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   z-index: 500;
@@ -1479,11 +1479,21 @@ body.overflow {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+.fooled__info-text span {
+  font-weight: 700;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 .fooled__info-text.super-bold {
   font-size: 24px;
   font-weight: 600;
   line-height: 143.99%;
   margin-bottom: 24px;
+}
+.fooled__info-text.medium-bold {
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 20px;
 }
 .fooled__info-text.bold {
   font-weight: 600;
@@ -1503,11 +1513,40 @@ body.overflow {
   margin-bottom: 15px;
 }
 .fooled__info-list li {
-  list-style: disc;
-  list-style-position: inside;
+  /*list-style: disc;
+  list-style-position: inside;*/
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  position: relative;
+  padding-left: 20px;
+  /*&::marker {
+      font-size: 12px;
+  }*/
 }
-.fooled__info-list li::marker {
-  font-size: 12px;
+.fooled__info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+.fooled__info-list li a {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  text-decoration-line: underline;
+}
+.fooled__info-list li span {
+  font-weight: 700;
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 .fooled__info-list li + li {
   margin-top: 15px;
@@ -1565,6 +1604,62 @@ body.overflow {
 }
 .fooled-modal__info-text + .fooled-modal__info-text {
   margin-top: 20px;
+}
+
+.article-modal {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  height: 100vh;
+  display: none;
+}
+.article-modal__info {
+  background-color: #fff;
+  z-index: 10000;
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  padding: 60px 50px;
+}
+.article-modal__info-title {
+  color: #001333;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 143.99%;
+  margin-bottom: 24px;
+}
+.article-modal__info-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+.article-modal__info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.article-modal__info-close:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 /* Footer */
