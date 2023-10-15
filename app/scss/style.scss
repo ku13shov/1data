@@ -1217,7 +1217,7 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: 143.99%;
-        margin-bottom: 2px;
+        margin-bottom: 15px;
     }
 
     &__tabs {
@@ -1286,6 +1286,10 @@ body {
             line-height: normal;
             letter-spacing: 0.16px;
 
+            &.pl24 {
+                padding-left: 24px;
+            }
+
             &.list-item {
                 padding-left: 24px;
                 position: relative;
@@ -1300,6 +1304,22 @@ body {
                     background-color: #001333;
                     border-radius: 50%;
                 }
+            }
+
+            a {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-decoration-line: underline;
+            }
+
+            span {
+                font-weight: 700;
+                text-decoration-line: underline;
+                cursor: pointer;
             }
         }
 
@@ -1316,6 +1336,11 @@ body {
             line-height: normal;
             letter-spacing: 0.16px;
             margin-top: 24px;
+
+            span {
+                text-decoration-line: underline;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -1649,6 +1674,10 @@ body {
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.16px;
+
+            &.mt20 {
+                margin-top: 20px;
+            }
         }
 
         &-close {

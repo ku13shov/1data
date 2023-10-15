@@ -1252,7 +1252,7 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 143.99%;
-  margin-bottom: 2px;
+  margin-bottom: 15px;
 }
 .about__tabs {
   display: -webkit-box;
@@ -1323,6 +1323,9 @@ body {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+.about__info-text.pl24 {
+  padding-left: 24px;
+}
 .about__info-text.list-item {
   padding-left: 24px;
   position: relative;
@@ -1337,6 +1340,20 @@ body {
   background-color: #001333;
   border-radius: 50%;
 }
+.about__info-text a {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.about__info-text span {
+  font-weight: 700;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 .about__info-text + .about__info-text {
   margin-top: 15px;
 }
@@ -1349,6 +1366,10 @@ body {
   line-height: normal;
   letter-spacing: 0.16px;
   margin-top: 24px;
+}
+.about__info-attention span {
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 
 /* Dont be fooled page */
@@ -1651,6 +1672,9 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.16px;
+}
+.article-modal__info-text.mt20 {
+  margin-top: 20px;
 }
 .article-modal__info-close {
   position: absolute;
