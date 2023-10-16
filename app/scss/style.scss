@@ -1973,6 +1973,12 @@ body {
             border: 1px solid #001333;
             background: #001333;
             margin-bottom: 24px;
+            transition: all .15s linear;
+
+            &:hover {
+                background-color: #0085ff;
+                border-color: #0085ff;
+            }
         }
     }
 
@@ -2005,7 +2011,7 @@ body {
 /* about granit pages */
 .granit {
     padding-bottom: 45px;
-    
+
     &__title {
         margin-bottom: 20px;
     }
@@ -2068,8 +2074,8 @@ body {
                     left: 5px;
                 }
             }
-            
-            li+li {
+
+            li + li {
                 margin-top: 5px;
             }
         }
@@ -2080,6 +2086,82 @@ body {
 
         .bold {
             font-weight: 700;
+        }
+    }
+}
+
+/* landscaping pages */
+.landscaping {
+    padding-bottom: 50px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        grid-template-rows: none;
+        margin-bottom: 34px;
+
+        .cards__item-title {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            height: 52px;
+        }
+    }
+
+    &__info {
+        &-bluetext,
+        &-title,
+        &-text {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            line-height: normal;
+            color: #001333;
+        }
+
+        &-bluetext {
+            color: #0085ff;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+
+            a {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-decoration-line: underline;
+            }
+        }
+
+        &-image {
+            max-width: 600px;
+            width: 100%;
+            height: min-content;
+            margin-bottom: 24px;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .mb24 {
+            margin-bottom: 24px;
         }
     }
 }

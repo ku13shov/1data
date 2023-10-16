@@ -1919,6 +1919,12 @@ body {
   border: 1px solid #001333;
   background: #001333;
   margin-bottom: 24px;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.installments__info-btn:hover {
+  background-color: #0085ff;
+  border-color: #0085ff;
 }
 .installments .mb20 {
   margin-bottom: 20px;
@@ -2004,6 +2010,73 @@ body {
 }
 .granit__info .bold {
   font-weight: 700;
+}
+
+/* landscaping pages */
+.landscaping {
+  padding-bottom: 50px;
+}
+.landscaping__title {
+  margin-bottom: 20px;
+}
+.landscaping__items {
+  grid-template-rows: none;
+  margin-bottom: 34px;
+}
+.landscaping__items .cards__item-title {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+}
+.landscaping__info-bluetext, .landscaping__info-title, .landscaping__info-text {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  color: #001333;
+}
+.landscaping__info-bluetext {
+  color: #0085ff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.landscaping__info-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.landscaping__info-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.landscaping__info-text a {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.landscaping__info-image {
+  max-width: 600px;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-bottom: 24px;
+}
+.landscaping__info .bold {
+  font-weight: 700;
+}
+.landscaping__info .mb24 {
+  margin-bottom: 24px;
 }
 
 .article-modal {
