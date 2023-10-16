@@ -1821,6 +1821,62 @@ body {
     }
 }
 
+/* contacts pages */
+.contacts {
+    padding-bottom: 45px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 34px;
+
+        .cards__item-title {
+            &.active {
+                color: #0085ff;
+            }
+        }
+    }
+
+    &__info {
+        &-title,
+        &-text {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 143.99%;
+            margin-bottom: 24px;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.16px;
+            margin-bottom: 15px;
+
+            &.bold {
+                font-weight: 700;
+            }
+
+            &.mb24 {
+                margin-bottom: 24px;
+            }
+
+            &.mb34 {
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
+
 .article-modal {
     position: fixed;
     left: 0;
