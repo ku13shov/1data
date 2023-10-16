@@ -1940,6 +1940,72 @@ body {
   font-weight: 700;
 }
 
+/* about granit pages */
+.granit {
+  padding-bottom: 45px;
+}
+.granit__title {
+  margin-bottom: 20px;
+}
+.granit__items {
+  grid-template-rows: none;
+  margin-bottom: 34px;
+}
+.granit__items .cards__item-title.active {
+  color: #0085ff;
+}
+.granit__info-title, .granit__info-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+.granit__info-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  margin-bottom: 15px;
+}
+.granit__info-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.granit__info-map {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-bottom: 10px;
+}
+.granit__info-list {
+  margin-bottom: 15px;
+}
+.granit__info-list li {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  padding-left: 20px;
+}
+.granit__info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+.granit__info-list li + li {
+  margin-top: 5px;
+}
+.granit__info .mb10 {
+  margin-bottom: 10px;
+}
+.granit__info .bold {
+  font-weight: 700;
+}
+
 .article-modal {
   position: fixed;
   left: 0;
