@@ -57,8 +57,11 @@ function cleanDist() {
 function building() {
     return src([
         'app/css/style.min.css',
-        'app/js/main.min.js',
+        'app/js/*.js',
         'app/**/*.html',
+        'app/images/*',
+        'app/images/*/*',
+        'app/legal-issues/docs/*.pdf',
     ], {base: 'app'})
     .pipe(dest('dist'))
 }
