@@ -1682,6 +1682,10 @@ body {
     &__info {
         &-title {
             margin-bottom: 10px;
+
+            &.mb20 {
+                margin-bottom: 20px;
+            }
         }
 
         &-text + &-text {
@@ -1717,6 +1721,17 @@ body {
                     content: '•';
                     position: absolute;
                     left: 5px;
+                }
+
+                a {
+                    color: #001333;
+                    text-align: center;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-decoration-line: underline;
                 }
             }
 
@@ -1791,6 +1806,17 @@ body {
             font-weight: 700;
             letter-spacing: 2.4px;
             text-transform: uppercase;
+        }
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 20px;
+
+        &-slide {
+            box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.20);
         }
     }
 }

@@ -1667,6 +1667,9 @@ body {
 .legally__info-title {
   margin-bottom: 10px;
 }
+.legally__info-title.mb20 {
+  margin-bottom: 20px;
+}
 .legally__info-text + .legally__info-text {
   margin-top: 10px;
 }
@@ -1694,6 +1697,16 @@ body {
   content: "•";
   position: absolute;
   left: 5px;
+}
+.legally__info-list li a {
+  color: #001333;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 .legally__info-list li + li {
   margin-top: 10px;
@@ -1765,6 +1778,16 @@ body {
   font-weight: 700;
   letter-spacing: 2.4px;
   text-transform: uppercase;
+}
+.legally__swiper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.legally__swiper-slide {
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
+  box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
 }
 
 .article-modal {
