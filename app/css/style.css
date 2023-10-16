@@ -1985,6 +1985,9 @@ body {
 .article-modal__info-text.mt20 {
   margin-top: 20px;
 }
+.article-modal__info-text.mb10 {
+  margin-bottom: 10px;
+}
 .article-modal__info-close {
   position: absolute;
   top: 10px;
