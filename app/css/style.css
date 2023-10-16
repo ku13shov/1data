@@ -1677,8 +1677,26 @@ body {
 .legally__info-text.bold {
   font-weight: 600;
 }
+.legally__info-text.super-bold {
+  font-weight: 700;
+}
 .legally__info-text.mt34 {
   margin-top: 34px;
+}
+.legally__info-list li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  padding-left: 20px;
+}
+.legally__info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+.legally__info-list li + li {
+  margin-top: 10px;
 }
 .legally__form {
   margin-top: 34px;

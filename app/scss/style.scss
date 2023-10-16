@@ -1696,8 +1696,32 @@ body {
                 font-weight: 600;
             }
 
+            &.super-bold {
+                font-weight: 700;
+            }
+
             &.mt34 {
                 margin-top: 34px;
+            }
+        }
+
+        &-list {
+            li {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                position: relative;
+                padding-left: 20px;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                }
+            }
+
+            li + li {
+                margin-top: 10px;
             }
         }
     }
