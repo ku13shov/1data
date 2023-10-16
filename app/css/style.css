@@ -1832,6 +1832,114 @@ body {
   margin-bottom: 34px;
 }
 
+/* installments pages */
+.installments {
+  padding-bottom: 60px;
+}
+.installments__title {
+  margin-bottom: 20px;
+}
+.installments__items {
+  grid-template-rows: none;
+  margin-bottom: 34px;
+}
+.installments__items .cards__item-title {
+  text-align: center;
+}
+.installments__info-title, .installments__info-text, .installments__info-bluetext {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+.installments__info-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  margin-bottom: 10px;
+}
+.installments__info-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.installments__info-text a,
+.installments__info-text span {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.installments__info-bluetext {
+  color: #0085ff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.installments__info-list li {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+.installments__info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+.installments__info-btn {
+  width: 100%;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #001333;
+  background: #001333;
+  margin-bottom: 24px;
+}
+.installments .mb20 {
+  margin-bottom: 20px;
+}
+.installments .mb10 {
+  margin-bottom: 10px;
+}
+.installments .mb15 {
+  margin-bottom: 15px;
+}
+.installments .mb24 {
+  margin-bottom: 24px;
+}
+.installments .letter-spacing {
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.installments .bold {
+  font-weight: 700;
+}
+
 .article-modal {
   position: fixed;
   left: 0;
