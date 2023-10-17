@@ -2169,8 +2169,8 @@ body {
 
 /* decoration pages */
 .decoration {
-    padding-bottom: 60px;
-    
+    padding-bottom: 50px;
+
     &__title {
         margin-bottom: 20px;
     }
@@ -2213,12 +2213,41 @@ body {
             font-weight: 400;
         }
 
+        &-list {
+            margin-bottom: 24px;
+            
+            li {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-left: 20px;
+                position: relative;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                }
+            }
+
+            li + li {
+                margin-top: 5px;
+            }
+        }
+
         .bold {
             font-weight: 700;
         }
 
         .mb0 {
             margin-bottom: 0;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
         }
 
         .mb24 {

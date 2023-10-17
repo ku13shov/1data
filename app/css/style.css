@@ -2082,7 +2082,7 @@ body {
 
 /* decoration pages */
 .decoration {
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 .decoration__title {
   margin-bottom: 20px;
@@ -2121,11 +2121,35 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+.decoration__info-list {
+  margin-bottom: 24px;
+}
+.decoration__info-list li {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+  position: relative;
+}
+.decoration__info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+.decoration__info-list li + li {
+  margin-top: 5px;
+}
 .decoration__info .bold {
   font-weight: 700;
 }
 .decoration__info .mb0 {
   margin-bottom: 0;
+}
+.decoration__info .mb10 {
+  margin-bottom: 10px;
 }
 .decoration__info .mb24 {
   margin-bottom: 24px;
