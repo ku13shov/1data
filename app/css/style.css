@@ -357,13 +357,14 @@ body {
 .cards__item-subtext {
   position: absolute;
   bottom: 6px;
-  left: 10px;
+  padding: 0 10px;
   color: #fff;
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: 143.99%;
+  text-shadow: 0 0 8px #001333;
 }
 .cards__item-title {
   color: #001333;
@@ -2076,6 +2077,57 @@ body {
   font-weight: 700;
 }
 .landscaping__info .mb24 {
+  margin-bottom: 24px;
+}
+
+/* decoration pages */
+.decoration {
+  padding-bottom: 60px;
+}
+.decoration__title {
+  margin-bottom: 20px;
+}
+.decoration__items {
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 34px;
+}
+.decoration__items .cards__item-title {
+  padding: 0 10px;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.decoration__items .cards__item-title.active {
+  color: #0085ff;
+}
+.decoration__info-title, .decoration__info-text {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.decoration__info-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+}
+.decoration__info-text {
+  color: #001333;
+  font-size: 16px;
+  font-weight: 400;
+}
+.decoration__info .bold {
+  font-weight: 700;
+}
+.decoration__info .mb0 {
+  margin-bottom: 0;
+}
+.decoration__info .mb24 {
   margin-bottom: 24px;
 }
 
