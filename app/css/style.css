@@ -64,6 +64,10 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+.container.special {
+  position: relative;
+  overflow: hidden;
+}
 
 .content-box {
   display: -webkit-box;
@@ -975,13 +979,58 @@ body {
   background-color: #001333;
   color: #fff;
 }
-.catalog__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 24px 24px;
-  margin-bottom: 30px;
+.catalog__swiper {
+  padding-bottom: 64px;
+  padding-top: 5px;
+}
+.catalog__swiper-button-prev, .catalog__swiper-button-next {
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.catalog__swiper-button-prev {
+  left: 8px;
+}
+.catalog__swiper-button-next {
+  right: 8px;
+}
+.catalog__swiper-button-prev svg, .catalog__swiper-button-next svg {
+  width: 40px;
+  height: 40px;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
+  box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
+  cursor: pointer;
+  background-color: #fff;
+}
+.catalog__swiper-pagination {
+  position: absolute;
+  bottom: 26px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.catalog__swiper-pagination .swiper-pagination-bullet {
+  height: 4px;
+  width: 40px;
+  background-color: #cfd8e0;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 2px !important;
+}
+.catalog__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #001333;
 }
 .catalog__item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 10px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.2);
@@ -1056,6 +1105,12 @@ body {
 .catalog__item-btn:hover {
   background-color: #0085ff;
 }
+.catalog__info {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .catalog__info-text, .catalog__info-link {
   color: #001333;
   font-family: "Manrope", sans-serif;
@@ -1075,8 +1130,10 @@ body {
 
 /* Detail page */
 .detail {
-  padding-top: 14px;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+}
+.detail__installment {
+  padding-top: 5px;
 }
 .detail__installment-title {
   color: #001333;
@@ -1128,6 +1185,12 @@ body {
   margin-top: auto;
   max-width: 360px;
   width: 100%;
+}
+.detail .card__info-box {
+  display: none;
+}
+.detail .card__info-box.active {
+  display: block;
 }
 .detail .card__info-row {
   display: -webkit-box;
