@@ -13,7 +13,7 @@ function styles() {
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))
-        .pipe(dest('app/css'))
+        .pipe(dest('app/assets/css'))
         .pipe(browserSync.stream())
 }
 
@@ -22,22 +22,22 @@ function stylesMax() {
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
         .pipe(concat('style.css'))
         .pipe(scss({ outputStyle: 'expanded' }))
-        .pipe(dest('app/css'))
+        .pipe(dest('app/assets/css'))
         .pipe(browserSync.stream())
 }
 
 function scripts() {
-    return src('app/js/main.js')
+    return src('app/assets/js/main.js')
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(dest('app/js'))
+        .pipe(dest('app/assets/js'))
         .pipe(browserSync.stream())
 }
 
 function watching() {
     watch(['app/scss/style.scss'], styles);
     watch(['app/scss/style.scss'], stylesMax);
-    watch(['app/js/main.js'], scripts);
+    watch(['app/assets/js/main.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -56,11 +56,11 @@ function cleanDist() {
 
 function building() {
     return src([
-        'app/css/style.min.css',
-        'app/js/*.js',
+        'app/assets/css/style.min.css',
+        'app/assets/js/*.js',
         'app/**/*.html',
-        'app/images/*',
-        'app/images/*/*',
+        'app/assets/images/*',
+        'app/assets/images/*/*',
         'app/legal-issues/docs/*.pdf',
     ], {base: 'app'})
     .pipe(dest('dist'))
