@@ -1859,6 +1859,22 @@ body {
         &-choose {
             display: block;
             margin-bottom: 15px;
+
+            input {
+                display: none;
+            }
+
+            label {
+                color: #5a7794;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.16px;
+                text-decoration-line: underline;
+                cursor: pointer;
+            }
         }
 
         &-submit {

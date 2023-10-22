@@ -20,6 +20,7 @@
     <script defer src="../assets/js/cookie.js"></script>
     <script defer src="../assets/js/contactsAndCityModals.js"></script>
     <script defer src="../assets/js/entranceModal.js"></script>
+    <script defer src="../assets/js/chooseFiles.js"></script>
 
     <title>1Data</title>
 </head>
@@ -275,8 +276,9 @@
                         <input type="email" class="legally__form-input" placeholder="Ваш e-mail">
                         <textarea class="legally__form-textarea" placeholder="Опишите вашу ситуацию"></textarea>
 
-                        <div class="legally__form-choose">
-                            <input type="file" class="legally__form-file" multiple>
+<div class="legally__form-choose">
+                            <label for="choose-files">Прикрепить файлы</label>
+                            <input id="choose-files" type="file" class="legally__form-file" multiple>
                         </div>
 
                         <input type="submit" class="legally__form-submit" value="отправить">
