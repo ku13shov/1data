@@ -119,6 +119,10 @@ body {
 }
 
 .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
     padding: 15px 0;
     background-color: #001333;
     margin-bottom: 10px;
@@ -242,6 +246,12 @@ body {
 
 .navigation {
     margin-bottom: 5px;
+    z-index: 400;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    padding: 15px 0 10px 0;
+    background-color: #fff;
 
     &__box {
         position: relative;
@@ -299,6 +309,7 @@ body {
 
 /* INDEX PAGE */
 .cards {
+    padding-top: 125px;
     margin-bottom: 35px;
 
     &__title {
@@ -874,6 +885,7 @@ body {
 
 /* catalog PAGE */
 .catalog {
+    padding-top: 125px;
     margin-bottom: 55px;
 
     &__title {
@@ -1072,6 +1084,7 @@ body {
 
 /* Detail page */
 .detail {
+    padding-top: 125px;
     margin-bottom: 60px;
 
     &__installment {
@@ -1111,6 +1124,10 @@ body {
             }
 
             &.mon36 {
+                background-color: #db1e32;
+            }
+
+            &.mon24 {
                 background-color: #db1e32;
             }
         }
@@ -1209,6 +1226,7 @@ body {
                 line-height: normal;
                 letter-spacing: 0.32px;
                 text-transform: uppercase;
+                transition: all .15s linear;
 
                 &.order {
                     margin-top: 14px;
@@ -1221,6 +1239,12 @@ body {
                     background-color: #fff;
                     border: 1px solid #001333;
                     color: #001333;
+                }
+
+                &:hover {
+                    background-color: #0085ff;
+                    border-color: #0085ff;
+                    color: #fff;
                 }
             }
         }
@@ -1280,6 +1304,7 @@ body {
 
 /* About pages */
 .about {
+    padding-top: 125px;
     margin-bottom: 55px;
 
     &__title {
@@ -1419,6 +1444,7 @@ body {
 
 /* Dont be fooled pages */
 .fooled {
+    padding-top: 125px;
     margin-bottom: 55px;
 
     &__title,
@@ -1714,6 +1740,7 @@ body {
 
 /* legal-issues pages */
 .legally {
+    padding-top: 125px;
     padding-bottom: 65px;
 
     &__title {
@@ -1904,6 +1931,7 @@ body {
 
 /* contacts pages */
 .contacts {
+    padding-top: 125px;
     padding-bottom: 45px;
 
     &__title {
@@ -1960,6 +1988,7 @@ body {
 
 /* installments pages */
 .installments {
+    padding-top: 125px;
     padding-bottom: 60px;
 
     &__title {
@@ -2091,6 +2120,7 @@ body {
 
 /* about granit pages */
 .granit {
+    padding-top: 125px;
     padding-bottom: 45px;
 
     &__title {
@@ -2173,6 +2203,7 @@ body {
 
 /* landscaping pages */
 .landscaping {
+    padding-top: 125px;
     padding-bottom: 50px;
 
     &__title {
@@ -2249,6 +2280,7 @@ body {
 
 /* decoration pages */
 .decoration {
+    padding-top: 125px;
     padding-bottom: 50px;
 
     &__title {

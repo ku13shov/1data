@@ -127,6 +127,10 @@ body {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   padding: 15px 0;
   background-color: #001333;
   margin-bottom: 10px;
@@ -253,6 +257,12 @@ body {
 
 .navigation {
   margin-bottom: 5px;
+  z-index: 400;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  padding: 15px 0 10px 0;
+  background-color: #fff;
 }
 .navigation__box {
   position: relative;
@@ -306,6 +316,7 @@ body {
 
 /* INDEX PAGE */
 .cards {
+  padding-top: 125px;
   margin-bottom: 35px;
 }
 .cards__title {
@@ -926,6 +937,7 @@ body {
 
 /* catalog PAGE */
 .catalog {
+  padding-top: 125px;
   margin-bottom: 55px;
 }
 .catalog__title {
@@ -1130,6 +1142,7 @@ body {
 
 /* Detail page */
 .detail {
+  padding-top: 125px;
   margin-bottom: 60px;
 }
 .detail__installment {
@@ -1167,6 +1180,9 @@ body {
   background-color: #eb8d36;
 }
 .detail__installment-item.mon36 {
+  background-color: #db1e32;
+}
+.detail__installment-item.mon24 {
   background-color: #db1e32;
 }
 .detail .card {
@@ -1259,6 +1275,8 @@ body {
   line-height: normal;
   letter-spacing: 0.32px;
   text-transform: uppercase;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 .detail .card__info-btn.order {
   margin-top: 14px;
@@ -1270,6 +1288,11 @@ body {
   background-color: #fff;
   border: 1px solid #001333;
   color: #001333;
+}
+.detail .card__info-btn:hover {
+  background-color: #0085ff;
+  border-color: #0085ff;
+  color: #fff;
 }
 .detail .tabs__btns {
   display: -webkit-box;
@@ -1317,6 +1340,7 @@ body {
 
 /* About pages */
 .about {
+  padding-top: 125px;
   margin-bottom: 55px;
 }
 .about__title {
@@ -1448,6 +1472,7 @@ body {
 
 /* Dont be fooled pages */
 .fooled {
+  padding-top: 125px;
   margin-bottom: 55px;
 }
 .fooled__title, .fooled__text {
@@ -1711,6 +1736,7 @@ body {
 
 /* legal-issues pages */
 .legally {
+  padding-top: 125px;
   padding-bottom: 65px;
 }
 .legally__title {
@@ -1874,6 +1900,7 @@ body {
 
 /* contacts pages */
 .contacts {
+  padding-top: 125px;
   padding-bottom: 45px;
 }
 .contacts__title {
@@ -1916,6 +1943,7 @@ body {
 
 /* installments pages */
 .installments {
+  padding-top: 125px;
   padding-bottom: 60px;
 }
 .installments__title {
@@ -2030,6 +2058,7 @@ body {
 
 /* about granit pages */
 .granit {
+  padding-top: 125px;
   padding-bottom: 45px;
 }
 .granit__title {
@@ -2096,6 +2125,7 @@ body {
 
 /* landscaping pages */
 .landscaping {
+  padding-top: 125px;
   padding-bottom: 50px;
 }
 .landscaping__title {
@@ -2163,6 +2193,7 @@ body {
 
 /* decoration pages */
 .decoration {
+  padding-top: 125px;
   padding-bottom: 50px;
 }
 .decoration__title {

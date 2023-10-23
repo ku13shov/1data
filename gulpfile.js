@@ -61,7 +61,7 @@ function building() {
         'app/**/*.html',
         'app/assets/images/*',
         'app/assets/images/*/*',
-        'app/legal-issues/docs/*.pdf',
+        'app/assets/docs/*.pdf',
     ], {base: 'app'})
     .pipe(dest('dist'))
 }
