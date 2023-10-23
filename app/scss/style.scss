@@ -1226,7 +1226,7 @@ body {
                 line-height: normal;
                 letter-spacing: 0.32px;
                 text-transform: uppercase;
-                transition: all .15s linear;
+                transition: all 0.15s linear;
 
                 &.order {
                     margin-top: 14px;
@@ -2019,6 +2019,13 @@ body {
             font-weight: 700;
             letter-spacing: 0.24px;
             margin-bottom: 10px;
+
+            &:target::before {
+                content: '';
+                display: block;
+                height: 140px;
+                margin-top: -140px;
+            }
         }
 
         &-text {
@@ -2237,6 +2244,10 @@ body {
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 24px;
+
+            &.regular {
+                font-weight: 400;
+            }
         }
 
         &-title {
@@ -2259,6 +2270,17 @@ body {
                 line-height: normal;
                 text-decoration-line: underline;
             }
+
+            &.beams,
+            &.basic,
+            &.mono {
+                &:target::before {
+                    content: '';
+                    display: block;
+                    height: 140px;
+                    margin-top: -140px;
+                }
+            }
         }
 
         &-image {
@@ -2268,12 +2290,56 @@ body {
             margin-bottom: 24px;
         }
 
+        &-images {
+            display: flex;
+            gap: 10px;
+
+            .landscaping__info-image {
+                &:first-child {
+                    max-width: 570px;
+                }
+
+                &:last-child {
+                    max-width: 360px;
+                }
+            }
+        }
+
+        &-list {
+            margin-bottom: 10px;
+
+            li {
+                color: #001333;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-left: 20px;
+                position: relative;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                }
+            }
+        }
+
         .bold {
             font-weight: 700;
         }
 
         .mb24 {
             margin-bottom: 24px;
+        }
+
+        .mb0 {
+            margin-bottom: 0px;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
         }
     }
 }
