@@ -1334,6 +1334,16 @@ body {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+.detail .tabs__info-link {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  text-decoration-line: underline;
+}
 .detail .tabs__info-text + .tabs__info-text {
   margin-top: 20px;
 }
