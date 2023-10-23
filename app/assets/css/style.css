@@ -1052,6 +1052,9 @@ body {
   margin-bottom: 10px;
   height: 243px;
 }
+.catalog__item-img a {
+  display: inline-block;
+}
 .catalog__item-info {
   display: -webkit-box;
   display: -ms-flexbox;
