@@ -1498,6 +1498,13 @@ body {
   text-decoration-line: underline;
   cursor: pointer;
 }
+.about__info .bold {
+  font-weight: 600;
+}
+.about__items {
+  margin-bottom: 24px;
+  grid-template-rows: none;
+}
 
 /* Dont be fooled pages */
 .fooled {

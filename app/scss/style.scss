@@ -1470,6 +1470,15 @@ body {
                 cursor: pointer;
             }
         }
+
+        .bold {
+            font-weight: 600;
+        }
+    }
+
+    &__items {
+        margin-bottom: 24px;
+        grid-template-rows: none;
     }
 }
 
