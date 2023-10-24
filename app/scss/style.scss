@@ -2603,6 +2603,123 @@ body {
     }
 }
 
+/* reviews page */
+.reviews {
+    padding-top: 125px;
+    padding-bottom: 60px;
+
+    &__title {
+        color: #001333;
+        font-family: 'Cormorant Unicase', serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 143.99%;
+        margin-bottom: 15px;
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__tab {
+        color: #001333;
+        text-align: center;
+        font-family: 'Manrope', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        max-width: 130px;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeef2;
+        cursor: pointer;
+
+        &.active {
+            background-color: #001333;
+            color: #fff;
+        }
+    }
+
+    &__bluetext,
+    &__text {
+        color: #0085ff;
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 700;
+        color: #001333;
+    }
+
+    &__box {
+        padding: 34px 0;
+
+        &-review + &-review {
+            margin-top: 34px;
+        }
+
+        &-title,
+        &-text {
+            color: #001333;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        &-title {
+            margin-bottom: 5px;
+        }
+
+        &-text {
+            font-weight: 400;
+        }
+
+        &-stars {
+            margin-bottom: 15px;
+        }
+
+        &-star {
+            &.grey {
+                path {
+                    fill: #cfd8e0;
+                }
+            }
+
+            &.gold {
+                path {
+                    fill: #f2c94c;
+                    fill-opacity: 1;
+                }
+            }
+        }
+
+        &-images {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        &-img {
+            max-width: 100px;
+            width: 100%;
+        }
+    }
+}
+
 /* Footer */
 .footer {
     background-color: #001333;

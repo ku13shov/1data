@@ -2,6 +2,7 @@ const headerLogin = document.querySelector('.header__login');
 const entranceModalClose = document.querySelector('.entrance-modal__info-close');
 const entranceModalOverlay = document.querySelector('.entrance-modal .overlay');
 const entranceModal = document.querySelector('.entrance-modal');
+const leaveFeedback = document.querySelector('#leave-feedback');
 
 const showOrCloseEntranceModal = () => {
     const body = document.querySelector('body');
@@ -27,6 +28,11 @@ headerLogin.addEventListener('click', showOrCloseEntranceModal);
 entranceModalClose.addEventListener('click', showOrCloseEntranceModal);
 
 entranceModalOverlay.addEventListener('click', showOrCloseEntranceModal);
+
+if (leaveFeedback) {
+    leaveFeedback.addEventListener('click', showOrCloseEntranceModal);
+
+}
 
 // Используем Inputmask для создания маски номера телефона
 $(document).ready(function () {
