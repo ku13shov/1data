@@ -779,13 +779,7 @@ body {
 
         &-checkbox {
             label {
-                color: #001333;
-                font-family: 'Manrope', sans-serif;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                text-decoration-line: underline;
+                
                 user-select: none;
                 display: flex;
                 align-items: center;
@@ -795,6 +789,16 @@ body {
                 width: 100%;
                 margin: 0 auto 30px auto;
                 text-align: left;
+
+                a {
+                    color: #001333;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                }
 
                 input {
                     display: none;

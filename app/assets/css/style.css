@@ -832,13 +832,6 @@ body {
   color: #5a7794;
 }
 .entrance-modal__form-checkbox label {
-  color: #001333;
-  font-family: "Manrope", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration-line: underline;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -855,6 +848,15 @@ body {
   width: 100%;
   margin: 0 auto 30px auto;
   text-align: left;
+}
+.entrance-modal__form-checkbox label a {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 .entrance-modal__form-checkbox label input {
   display: none;

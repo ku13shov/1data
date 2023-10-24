@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../assets/css/style.min.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
     <script defer src="../assets/js/swiper.js"></script>
     <script defer src="../assets/js/cookie.js"></script>
     <script defer src="../assets/js/contactsAndCityModals.js"></script>
@@ -686,12 +688,12 @@
 
                         <form class="entrance-modal__form">
                             <input type="text" class="entrance-modal__form-input" placeholder="Ваше имя">
-                            <input type="tel" class="entrance-modal__form-input" placeholder="Ваш телефон">
+                            <input type="tel" class="entrance-modal__form-input" id="phone-input" placeholder="+375 (__) ___-__-__">
                             <div class="entrance-modal__form-checkbox">
                                 <label>
                                     <input type='checkbox'>
                                     <span></span>
-                                    Соглашаюсь на обработку персональных данных
+                                    <a href="../assets/docs/offerta.pdf" target="_blank">Соглашаюсь на обработку персональных данных</a>
                                 </label>
                             </div>
                             <input type="submit" class="entrance-modal__form-btn">

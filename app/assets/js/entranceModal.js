@@ -21,3 +21,9 @@ const showEntranceModal = () => {
 }
 
 headerLogin.addEventListener('click', showEntranceModal);
+
+
+// Используем Inputmask для создания маски номера телефона
+$(document).ready(function () {
+    $('#phone-input').inputmask("+375 (99) 999-99-99");
+});
