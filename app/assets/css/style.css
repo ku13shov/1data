@@ -734,7 +734,7 @@ body {
   transform: scale(1.15);
 }
 
-.entrance-modal {
+.constructor-modal {
   position: fixed;
   left: 0;
   width: 100%;
@@ -744,17 +744,17 @@ body {
   display: none;
   height: calc(100vh - 80px);
 }
-.entrance-modal__wrapper {
+.constructor-modal__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
-.entrance-modal__left, .entrance-modal__right {
+.constructor-modal__left, .constructor-modal__right {
   width: 50%;
   padding: 0 40px;
 }
-.entrance-modal__left {
+.constructor-modal__left {
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,7 +763,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
-.entrance-modal__container {
+.constructor-modal__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,11 +774,11 @@ body {
   width: 100%;
   margin-left: auto;
 }
-.entrance-modal__box {
+.constructor-modal__box {
   max-width: 360px;
   width: 100%;
 }
-.entrance-modal__title {
+.constructor-modal__title {
   color: #001333;
   text-align: center;
   font-family: "Cormorant Unicase", serif;
@@ -788,7 +788,7 @@ body {
   line-height: 100%;
   margin-bottom: 2px;
 }
-.entrance-modal__text {
+.constructor-modal__text {
   color: #001333;
   text-align: center;
   font-family: "Manrope", sans-serif;
@@ -798,10 +798,10 @@ body {
   line-height: 160%;
   margin-bottom: 30px;
 }
-.entrance-modal__form {
+.constructor-modal__form {
   text-align: center;
 }
-.entrance-modal__form-input {
+.constructor-modal__form-input {
   max-width: 296px;
   width: 100%;
   margin-bottom: 13px;
@@ -816,22 +816,22 @@ body {
   border: 1px solid #cfd8e0;
   outline-color: #001333;
 }
-.entrance-modal__form-input::-webkit-input-placeholder {
+.constructor-modal__form-input::-webkit-input-placeholder {
   color: #5a7794;
 }
-.entrance-modal__form-input::-moz-placeholder {
+.constructor-modal__form-input::-moz-placeholder {
   color: #5a7794;
 }
-.entrance-modal__form-input:-ms-input-placeholder {
+.constructor-modal__form-input:-ms-input-placeholder {
   color: #5a7794;
 }
-.entrance-modal__form-input::-ms-input-placeholder {
+.constructor-modal__form-input::-ms-input-placeholder {
   color: #5a7794;
 }
-.entrance-modal__form-input::placeholder {
+.constructor-modal__form-input::placeholder {
   color: #5a7794;
 }
-.entrance-modal__form-checkbox label {
+.constructor-modal__form-checkbox label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -849,7 +849,7 @@ body {
   margin: 0 auto 30px auto;
   text-align: left;
 }
-.entrance-modal__form-checkbox label a {
+.constructor-modal__form-checkbox label a {
   color: #001333;
   font-family: "Manrope", sans-serif;
   font-size: 12px;
@@ -858,10 +858,10 @@ body {
   line-height: normal;
   text-decoration-line: underline;
 }
-.entrance-modal__form-checkbox label input {
+.constructor-modal__form-checkbox label input {
   display: none;
 }
-.entrance-modal__form-checkbox label span {
+.constructor-modal__form-checkbox label span {
   height: 18px;
   width: 18px;
   border: 1px solid #cfd8e0;
@@ -872,7 +872,7 @@ body {
   background-color: #001333;
   text-align: center;
 }
-.entrance-modal__form-checkbox label input:checked + span:before {
+.constructor-modal__form-checkbox label input:checked + span:before {
   content: "✔";
   position: absolute;
   top: -3px;
@@ -881,7 +881,7 @@ body {
   font-size: 15px;
   color: #fff;
 }
-.entrance-modal__form-btn {
+.constructor-modal__form-btn {
   height: 56px;
   color: #fff;
   text-align: center;
@@ -898,7 +898,7 @@ body {
   width: 100%;
   cursor: pointer;
 }
-.entrance-modal__right {
+.constructor-modal__right {
   background-color: #001333;
   padding-bottom: 50px;
   display: -webkit-box;
@@ -908,11 +908,25 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
-.entrance-modal__right-box {
+.constructor-modal__right-box {
   max-width: 600px;
   width: 100%;
+  position: relative;
 }
-.entrance-modal__right-text {
+.constructor-modal__right-close {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.constructor-modal__right-close:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+}
+.constructor-modal__right-text {
   color: #fff;
   font-family: "Manrope", sans-serif;
   font-size: 14px;
@@ -923,7 +937,7 @@ body {
   padding-left: 24px;
   position: relative;
 }
-.entrance-modal__right-text::before {
+.constructor-modal__right-text::before {
   content: "";
   position: absolute;
   height: 4px;
@@ -933,7 +947,7 @@ body {
   top: 8px;
   left: 10px;
 }
-.entrance-modal__right-text + .entrance-modal__right-text {
+.constructor-modal__right-text + .constructor-modal__right-text {
   margin-top: 26px;
 }
 

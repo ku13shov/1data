@@ -692,7 +692,7 @@ body {
     }
 }
 
-.entrance-modal {
+.constructor-modal {
     position: fixed;
     left: 0;
     width: 100%;
@@ -856,6 +856,19 @@ body {
         &-box {
             max-width: 600px;
             width: 100%;
+            position: relative;
+        }
+
+        &-close {
+            position: absolute;
+            top: -50px;
+            right: 10px;
+            cursor: pointer;
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
         }
 
         &-text {
