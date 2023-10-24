@@ -21,7 +21,8 @@
     <script defer src="../assets/js/swiper.js"></script>
     <script defer src="../assets/js/cookie.js"></script>
     <script defer src="../assets/js/contactsAndCityModals.js"></script>
-    <script defer src="../assets/js/constructorModal.js"></script>
+        <script defer src="../assets/js/constructorModal.js"></script>
+    <script defer src="../assets/js/entranceModal.js"></script>
 
     <title>1Data</title>
 </head>
@@ -640,6 +641,43 @@
                     </svg>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="entrance-modal">
+        <div class="overlay"></div>
+
+        <div class="entrance-modal__info">
+            <form class="entrance-modal__form">
+                <h3 class="entrance-modal__form-title">
+                    Введите ваш номер
+                </h3>
+                <p class="entrance-modal__form-text">
+                    На ваш номер телефона вы получите код.
+                </p>
+
+                <input type="text" class="constructor-modal__form-input" placeholder="Ваше имя">
+                <input type="tel" class="constructor-modal__form-input" id="phone-entrance"
+                    placeholder="+375 (__) ___-__-__">
+                <div class="constructor-modal__form-checkbox">
+                    <label>
+                        <input type='checkbox'>
+                        <span></span>
+                        <a href="assets/docs/offerta.pdf" target="_blank">Соглашаюсь на обработку
+                            персональных данных</a>
+                    </label>
+                </div>
+                <input type="submit" class="constructor-modal__form-btn">
+            </form>
+
+            <svg class="entrance-modal__info-close" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="carbon:close">
+                    <path id="Vector"
+                        d="M17.414 16L24 9.414L22.586 8L16 14.586L9.414 8L8 9.414L14.586 16L8 22.586L9.414 24L16 17.414L22.586 24L24 22.586L17.414 16Z"
+                        fill="#001333" />
+                </g>
+            </svg>
         </div>
     </div>
 </body>

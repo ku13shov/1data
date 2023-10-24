@@ -779,7 +779,6 @@ body {
 
         &-checkbox {
             label {
-                
                 user-select: none;
                 display: flex;
                 align-items: center;
@@ -1010,7 +1009,7 @@ body {
         &-img {
             margin-bottom: 10px;
             height: 243px;
-            
+
             a {
                 display: inline-block;
             }
@@ -2524,6 +2523,73 @@ body {
             &:hover {
                 transform: scale(1.15);
             }
+        }
+    }
+}
+
+.entrance-modal {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+    height: 100vh;
+    display: none;
+
+    &__info {
+        background-color: #fff;
+        z-index: 10000;
+        position: relative;
+        max-width: 650px;
+        width: 100%;
+        padding: 40px;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: all 0.15s linear;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    &__form {
+        max-width: 360px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+
+        &-title {
+            color: #001333;
+            text-align: center;
+            font-family: 'Cormorant Unicase', serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            margin-bottom: 2px;
+        }
+
+        &-text {
+            color: #001333;
+            text-align: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 30px;
         }
     }
 }
