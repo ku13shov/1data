@@ -571,6 +571,11 @@ body {
         gap: 30px;
         padding: 25px 40px;
         background-color: #001333;
+
+        @media screen and (max-width: 750px) {
+            padding: 25px 20px;
+            gap: 20px;
+        }
     }
 
     &__info {
@@ -586,6 +591,10 @@ body {
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.16px;
+
+            @media screen and (max-width: 750px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -604,6 +613,7 @@ body {
         letter-spacing: 2.4px;
         text-transform: uppercase;
         transition: all 0.15s linear;
+        padding: 0 10px;
 
         &:hover {
             background-color: #0085ff;

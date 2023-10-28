@@ -595,6 +595,12 @@ body {
   padding: 25px 40px;
   background-color: #001333;
 }
+@media screen and (max-width: 750px) {
+  .cookie__wrapper {
+    padding: 25px 20px;
+    gap: 20px;
+  }
+}
 .cookie__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,6 +620,11 @@ body {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+@media screen and (max-width: 750px) {
+  .cookie__info-text {
+    font-size: 12px;
+  }
+}
 .cookie__btn {
   cursor: pointer;
   width: 85px;
@@ -630,6 +641,7 @@ body {
   text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  padding: 0 10px;
 }
 .cookie__btn:hover {
   background-color: #0085ff;
