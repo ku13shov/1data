@@ -1,4 +1,5 @@
-const headerLocation = document.querySelector('.header__location-city');
+const headerLocationCity = document.querySelector('.header__location-city');
+const headerLocation = document.querySelector('.header__location');
 const citiesModal = document.querySelector('.cities-modal');
 const citiesOverlay = document.querySelector('.cities-modal .overlay');
 const citiesModalClose = document.querySelector('.cities-modal__info-close');
@@ -45,7 +46,7 @@ citiesModalClose.addEventListener('click', () => {
 
 citiesParent.addEventListener('click', (e) => {
     if (e.target.closest('.cities-modal__info-item')) {
-        headerLocation.textContent = e.target.textContent;
+        headerLocationCity.textContent = e.target.textContent;
         hideModal(citiesModal);
     }
 })

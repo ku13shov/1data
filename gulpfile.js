@@ -57,6 +57,7 @@ function cleanDist() {
 function building() {
     return src([
         'app/assets/css/style.min.css',
+        'app/assets/css/style.css',
         'app/assets/js/*.js',
         'app/**/*.html',
         'app/assets/images/*',

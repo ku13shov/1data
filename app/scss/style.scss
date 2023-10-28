@@ -65,6 +65,10 @@ body {
         position: relative;
         overflow: hidden;
     }
+
+    @media screen and (max-width: 750px) {
+        padding: 0 10px;
+    }
 }
 
 .content-box {
@@ -78,6 +82,10 @@ body {
     gap: 10px;
     margin-bottom: 10px;
     margin-top: 15px;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 10px;
+    }
 
     &-link {
         color: #001333;
@@ -127,6 +135,10 @@ body {
     background-color: #001333;
     margin-bottom: 10px;
 
+    @media screen and (max-width: 550px) {
+        padding: 10px 0;
+    }
+
     &__wrapper,
     &__right,
     &__location {
@@ -134,6 +146,16 @@ body {
         justify-content: space-between;
         gap: 20px;
         align-items: center;
+    }
+
+    &__wrapper {
+        @media screen and (max-width: 750px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 550px) {
+            gap: 15px;
+        }
     }
 
     &__logo {
@@ -180,6 +202,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
 
             &.active {
                 background-color: #0085ff;
@@ -193,11 +216,28 @@ body {
 
             &.btn1 {
                 max-width: 250px;
+
+                @media screen and (max-width: 550px) {
+                    max-width: 550px;
+                }
             }
 
             &.btn2 {
                 max-width: 350px;
+
+                @media screen and (max-width: 550px) {
+                    max-width: 550px;
+                }
             }
+        }
+
+        @media screen and (max-width: 750px) {
+            order: 1;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 550px) {
+            flex-wrap: wrap;
         }
     }
 
@@ -205,6 +245,10 @@ body {
         gap: 10px;
         max-width: 260px;
         width: 100%;
+
+        @media screen and (max-width: 1023px) {
+            max-width: 170px;
+        }
     }
 
     &__phone {
@@ -236,6 +280,10 @@ body {
                 height: 10px;
                 background: url(../images/triangle.svg) no-repeat center/cover;
             }
+
+            @media screen and (max-width: 1023px) {
+                display: none;
+            }
         }
     }
 
@@ -252,6 +300,16 @@ body {
     width: 100%;
     padding: 15px 0 10px 0;
     background-color: #fff;
+
+    @media screen and (max-width: 750px) {
+        top: 144px;
+        padding: 10px 0;
+    }
+
+    @media screen and (max-width: 550px) {
+        top: 189px;
+        padding: 10px 0;
+    }
 
     &__box {
         position: relative;
@@ -287,7 +345,7 @@ body {
 
     &__list {
         &-item {
-            width: fit-content !important;
+            width: auto !important;
         }
 
         &-link {
@@ -303,6 +361,10 @@ body {
             &:hover {
                 color: #0085ff;
             }
+
+            @media screen and (max-width: 750px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -312,6 +374,15 @@ body {
     padding-top: 125px;
     margin-bottom: 35px;
 
+    @media screen and (max-width: 750px) {
+        padding-top: 185px;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding-top: 230px;
+        margin-bottom: 24px;
+    }
+
     &__title {
         color: #001333;
         font-family: 'Cormorant Unicase', serif;
@@ -319,18 +390,7 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: 143.99%;
-        margin-bottom: 2px;
-        user-select: none;
-    }
-
-    &__breadcrumbs {
-        color: #001333;
-        font-family: 'Manrope', sans-serif;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 143.99%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         user-select: none;
     }
 
@@ -339,6 +399,15 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 24px 24px;
+
+        @media screen and (max-width: 1023px) {
+            gap: 20px 20px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 550px) {
+            grid-template-columns: 1fr;
+        }
 
         a {
             transition: all 0.15s linear;
@@ -355,6 +424,7 @@ body {
 
     &__item {
         box-shadow: 0px 4px 10px 0px rgba(0, 19, 51, 0.16);
+        height: 100%;
 
         &-img {
             position: relative;
@@ -383,6 +453,10 @@ body {
             letter-spacing: 2.4px;
             text-transform: uppercase;
             padding: 6px 9px;
+
+            @media screen and (max-width: 750px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -398,6 +472,10 @@ body {
         font-weight: 600;
         line-height: 143.99%;
         margin-bottom: 15px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 20px;
+        }
     }
 
     &__text {
@@ -409,6 +487,12 @@ body {
         line-height: normal;
         letter-spacing: 0.16px;
         margin-bottom: 15px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+            line-height: 160%;
+            letter-spacing: 0.14px;
+        }
     }
 
     &__list {
@@ -423,6 +507,17 @@ body {
             padding-left: 24px;
             position: relative;
 
+            @media screen and (max-width: 750px) {
+                font-size: 14px;
+                line-height: 160%;
+                letter-spacing: 0.14px;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
             a {
                 font-family: 'Manrope', sans-serif;
                 color: #001333;
@@ -432,6 +527,12 @@ body {
                 line-height: 210%;
                 letter-spacing: 0.16px;
                 text-decoration-line: underline;
+
+                @media screen and (max-width: 750px) {
+                    font-size: 14px;
+                    line-height: 160%;
+                    letter-spacing: 0.14px;
+                }
             }
 
             &::before {
@@ -443,6 +544,11 @@ body {
                 border-radius: 50%;
                 left: 12px;
                 top: 15px;
+
+                @media screen and (max-width: 750px) {
+                    left: 10px;
+                    top: 10px;
+                }
             }
         }
     }
@@ -2728,6 +2834,13 @@ body {
 
     &__wrapper {
         display: flex;
+
+        @media screen and (max-width: 750px) {
+            flex-wrap: wrap;
+            gap: 30px;
+            position: relative;
+            padding-bottom: 40px;
+        }
     }
 
     &__logo {
@@ -2740,6 +2853,10 @@ body {
             line-height: normal;
             letter-spacing: -1.28px;
             text-transform: uppercase;
+
+            @media screen and (max-width: 750px) {
+                margin-bottom: 15px;
+            }
         }
     }
 
@@ -2754,6 +2871,18 @@ body {
         line-height: normal;
         text-decoration-line: underline;
         display: inline-block;
+
+        @media screen and (max-width: 750px) {
+            margin-right: 260px;
+        }
+
+        @media screen and (max-width: 550px) {
+            margin-right: 160px;
+        }
+
+        @media screen and (max-width: 390px) {
+            margin-right: 90px;
+        }
     }
 
     &__phone,
@@ -2763,11 +2892,20 @@ body {
 
     &__oferta {
         margin-bottom: 20px;
+
+        @media screen and (max-width: 750px) {
+            margin-bottom: 0px;
+        }
     }
 
     &__copy {
         display: flex;
         gap: 4px;
+
+        @media screen and (max-width: 750px) {
+            position: absolute;
+            bottom: 0;
+        }
 
         &-text {
             color: #fff;
@@ -2785,6 +2923,15 @@ body {
         &.col1 {
             max-width: 170px;
             margin-right: 115px;
+
+            @media screen and (max-width: 1023px) {
+                margin-right: 50px;
+            }
+
+            @media screen and (max-width: 750px) {
+                margin-right: 0px;
+                max-width: 800px;
+            }
         }
 
         &.col2 {
@@ -2804,6 +2951,14 @@ body {
             font-weight: 400;
             line-height: 16px;
         }
+    }
+}
+
+.title {
+    @media screen and (max-width: 750px) {
+        font-size: 28px;
+        line-height: 99.99%;
+        margin-bottom: 10px;
     }
 }
 
