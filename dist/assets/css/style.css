@@ -171,6 +171,9 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  .header__wrapper.hidden {
+    row-gap: 0;
+  }
 }
 @media screen and (max-width: 550px) {
   .header__wrapper {
@@ -202,9 +205,10 @@ body {
   width: 100%;
   margin-right: 15px;
   margin-left: auto;
-  -webkit-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  -webkit-transition: height 0.2s linear;
+  transition: height 0.2s linear;
   overflow: hidden;
+  height: 50px;
 }
 .header__buttons-btn {
   border: 2px solid #fff;
@@ -265,11 +269,15 @@ body {
     order: 1;
     margin: 0 auto;
   }
+  .header__buttons.hidden {
+    height: 0;
+  }
 }
 @media screen and (max-width: 550px) {
   .header__buttons {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    height: 110px;
   }
 }
 .header__right {
@@ -331,17 +339,25 @@ body {
   width: 100%;
   padding: 15px 0 10px 0;
   background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 @media screen and (max-width: 767px) {
   .navigation {
     top: 144px;
     padding: 10px 0;
   }
+  .navigation.hidden {
+    top: 74px;
+  }
 }
 @media screen and (max-width: 550px) {
   .navigation {
     top: 189px;
     padding: 10px 0;
+  }
+  .navigation.hidden {
+    top: 64px;
   }
 }
 .navigation__box {

@@ -23,6 +23,7 @@
     <script defer src="assets/js/contactsAndCityModals.js"></script>
     <script defer src="assets/js/constructorModal.js"></script>
     <script defer src="assets/js/entranceModal.js"></script>
+    <script defer src="assets/js/hideOrShowButtons.js"></script>
 
     <title>1Data</title>
 </head>
@@ -701,55 +702,6 @@
             </svg>
         </div>
     </div>
-
-    <script>
-        let prevScrollPos = window.pageYOffset;
-        const buttonsHeaderHeight = document.querySelector('.header__buttons').offsetHeight;
-        let headerHeight = document.querySelector('.header').offsetHeight;
-        const navigationHeight = document.querySelector('.navigation').offsetHeight;
-
-        function setPaddingTop(HtmlElement, headerHeight, navHeight) {
-            if (HtmlElement) {
-                HtmlElement.style.paddingTop = `${headerHeight + navHeight}px`;
-            }
-        }
-
-        function handleScroll() {
-            const currentScrollPos = window.pageYOffset;
-            const navigation = document.querySelector(".navigation");
-            const cards = document.querySelector(".cards");
-            const headerButtons = document.querySelector(".header__buttons");
-            const headerWrapper = document.querySelector(".header__wrapper");
-            headerHeight = document.querySelector('.header').offsetHeight;
-
-            if (prevScrollPos > currentScrollPos) {
-                headerButtons.style.height = `${buttonsHeaderHeight}px`;
-                headerWrapper.style.rowGap = '20px';
-                navigation.style.top = `${headerHeight}px`;
-
-                setPaddingTop(cards, headerHeight, navigationHeight);
-
-            } else if (prevScrollPos <= currentScrollPos) {
-                headerButtons.style.height = '0px';
-                headerWrapper.style.rowGap = '0px';
-                navigation.style.top = `${headerHeight}px`;
-
-                 setPaddingTop(cards, headerHeight, navigationHeight);
-            }
-
-            console.log(prevScrollPos)
-            console.log(currentScrollPos)
-
-            prevScrollPos = currentScrollPos;
-        }
-
-        // Проверяем, является ли устройство мобильным
-        const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
-
-        if (isMobile) {
-            window.onscroll = handleScroll;
-        }
-    </script>
 </body>
 
 </html>

@@ -153,6 +153,10 @@ body {
 
         @media screen and (max-width: 767px) {
             flex-wrap: wrap;
+
+            &.hidden {
+                row-gap: 0;
+            }
         }
 
         @media screen and (max-width: 550px) {
@@ -184,8 +188,9 @@ body {
         width: 100%;
         margin-right: 15px;
         margin-left: auto;
-        transition: all .15s linear;
+        transition: height .2s linear;
         overflow: hidden;
+        height: 50px;
 
         &-btn {
             border: 2px solid #fff;
@@ -238,10 +243,15 @@ body {
         @media screen and (max-width: 767px) {
             order: 1;
             margin: 0 auto;
+
+            &.hidden {
+                height: 0;
+            }
         }
 
         @media screen and (max-width: 550px) {
             flex-wrap: wrap;
+            height: 110px;
         }
     }
 
@@ -304,15 +314,24 @@ body {
     width: 100%;
     padding: 15px 0 10px 0;
     background-color: #fff;
+    transition: all .2s linear;
 
     @media screen and (max-width: 767px) {
         top: 144px;
         padding: 10px 0;
+
+        &.hidden {
+            top: 74px;
+        }
     }
 
     @media screen and (max-width: 550px) {
         top: 189px;
         padding: 10px 0;
+
+        &.hidden {
+            top: 64px;
+        }
     }
 
     &__box {
