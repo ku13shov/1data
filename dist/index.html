@@ -704,42 +704,41 @@
 
     <script>
         let prevScrollPos = window.pageYOffset;
+        const buttonsHeaderHeight = document.querySelector('.header__buttons').offsetHeight;
+        let headerHeight = document.querySelector('.header').offsetHeight;
+        const navigationHeight = document.querySelector('.navigation').offsetHeight;
 
+        function setPaddingTop(HtmlElement, headerHeight, navHeight) {
+            if (HtmlElement) {
+                HtmlElement.style.paddingTop = `${headerHeight + navHeight}px`;
+            }
+        }
 
         function handleScroll() {
-            const header = document.querySelector(".header");
+            const currentScrollPos = window.pageYOffset;
             const navigation = document.querySelector(".navigation");
             const cards = document.querySelector(".cards");
-            const currentScrollPos = window.pageYOffset;
-            const headerHeight = header.offsetHeight;
-            const navigationHeight = navigation.offsetHeight;
-
             const headerButtons = document.querySelector(".header__buttons");
             const headerWrapper = document.querySelector(".header__wrapper");
-            const headerButtonsHeight = headerButtons.offsetHeight;
+            headerHeight = document.querySelector('.header').offsetHeight;
 
             if (prevScrollPos > currentScrollPos) {
-                // header.style.top = "0";
-                headerButtons.style.height = '50px';
+                headerButtons.style.height = `${buttonsHeaderHeight}px`;
                 headerWrapper.style.rowGap = '20px';
-                navigation.style.top = `144px`;
+                navigation.style.top = `${headerHeight}px`;
 
-                if (cards) {
-                    cards.style.paddingTop = `125px`;
-                }
+                setPaddingTop(cards, headerHeight, navigationHeight);
 
-            } else {
-                // header.style.top = `-${headerHeight}px`;
+            } else if (prevScrollPos <= currentScrollPos) {
                 headerButtons.style.height = '0px';
                 headerWrapper.style.rowGap = '0px';
-                navigation.style.top = `74px`;
+                navigation.style.top = `${headerHeight}px`;
 
-                if (cards) {
-                    cards.style.paddingTop = `${navigationHeight + 20}px`;
-                }
+                 setPaddingTop(cards, headerHeight, navigationHeight);
             }
 
-            console.log(headerHeight)
+            console.log(prevScrollPos)
+            console.log(currentScrollPos)
 
             prevScrollPos = currentScrollPos;
         }
@@ -747,24 +746,8 @@
         // Проверяем, является ли устройство мобильным
         const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
 
-        const throttle = function (callback, timeout) {
-            let timer = null;
-
-            return function () {
-                if (timer) return;
-
-                timer = setTimeout(() => {
-                    callback();
-                    clearTimeout(timer)
-                    timer = null;
-                }, timeout);
-            }
-        }
-
-        const throttlehandleScroll = throttle(handleScroll, 100);
-
         if (isMobile) {
-            window.onscroll = throttlehandleScroll;
+            window.onscroll = handleScroll;
         }
     </script>
 </body>

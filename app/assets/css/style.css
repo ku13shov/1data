@@ -144,8 +144,6 @@ body {
   padding: 15px 0;
   background-color: #001333;
   margin-bottom: 10px;
-  -webkit-transition: top 0.2s linear;
-  transition: top 0.2s linear;
 }
 @media screen and (max-width: 550px) {
   .header {
@@ -165,8 +163,8 @@ body {
   align-items: center;
 }
 .header__wrapper {
-  -webkit-transition: row-gap 0.2s linear;
-  transition: row-gap 0.2s linear;
+  -webkit-transition: row-gap 0.15s linear;
+  transition: row-gap 0.15s linear;
 }
 @media screen and (max-width: 767px) {
   .header__wrapper {
@@ -204,8 +202,8 @@ body {
   width: 100%;
   margin-right: 15px;
   margin-left: auto;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
   overflow: hidden;
 }
 .header__buttons-btn {
@@ -333,8 +331,6 @@ body {
   width: 100%;
   padding: 15px 0 10px 0;
   background-color: #fff;
-  -webkit-transition: top 0.2s linear;
-  transition: top 0.2s linear;
 }
 @media screen and (max-width: 767px) {
   .navigation {
