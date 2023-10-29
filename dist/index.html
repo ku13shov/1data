@@ -85,7 +85,7 @@
         </div>
     </header>
 
- 
+
     <nav class="navigation">
         <div class="container">
             <div class="navigation__box">
@@ -701,6 +701,72 @@
             </svg>
         </div>
     </div>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+
+
+        function handleScroll() {
+            const header = document.querySelector(".header");
+            const navigation = document.querySelector(".navigation");
+            const cards = document.querySelector(".cards");
+            const currentScrollPos = window.pageYOffset;
+            const headerHeight = header.offsetHeight;
+            const navigationHeight = navigation.offsetHeight;
+
+            const headerButtons = document.querySelector(".header__buttons");
+            const headerWrapper = document.querySelector(".header__wrapper");
+            const headerButtonsHeight = headerButtons.offsetHeight;
+
+            if (prevScrollPos > currentScrollPos) {
+                // header.style.top = "0";
+                headerButtons.style.height = '50px';
+                headerWrapper.style.rowGap = '20px';
+                navigation.style.top = `144px`;
+
+                if (cards) {
+                    cards.style.paddingTop = `125px`;
+                }
+
+            } else {
+                // header.style.top = `-${headerHeight}px`;
+                headerButtons.style.height = '0px';
+                headerWrapper.style.rowGap = '0px';
+                navigation.style.top = `74px`;
+
+                if (cards) {
+                    cards.style.paddingTop = `${navigationHeight + 20}px`;
+                }
+            }
+
+            console.log(headerHeight)
+
+            prevScrollPos = currentScrollPos;
+        }
+
+        // Проверяем, является ли устройство мобильным
+        const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+
+        const throttle = function (callback, timeout) {
+            let timer = null;
+
+            return function () {
+                if (timer) return;
+
+                timer = setTimeout(() => {
+                    callback();
+                    clearTimeout(timer)
+                    timer = null;
+                }, timeout);
+            }
+        }
+
+        const throttlehandleScroll = throttle(handleScroll, 100);
+
+        if (isMobile) {
+            window.onscroll = throttlehandleScroll;
+        }
+    </script>
 </body>
 
 </html>
