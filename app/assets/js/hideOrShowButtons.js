@@ -1,5 +1,4 @@
 const navigation = document.querySelector(".navigation");
-const cards = document.querySelector(".cards");
 const headerButtons = document.querySelector(".header__buttons");
 const headerWrapper = document.querySelector(".header__wrapper");
 
