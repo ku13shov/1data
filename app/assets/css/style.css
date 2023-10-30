@@ -2711,7 +2711,8 @@ body {
     margin-right: 50px;
   }
   .fooled-modal__info,
-  .article-modal__info {
+  .article-modal__info,
+  .cities-modal__info {
     max-height: 100vh;
     overflow-y: auto;
   }
@@ -2723,7 +2724,8 @@ body {
   .title,
   .fooled__text,
   .fooled__title,
-  .fooled-modal__info-title {
+  .fooled-modal__info-title,
+  .cities-modal__info-title {
     font-size: 28px;
     line-height: 99.99%;
     margin-bottom: 20px;
@@ -2734,7 +2736,8 @@ body {
   }
   .article-modal__info,
   .fooled-modal__info,
-  .contacts-modal__info {
+  .contacts-modal__info,
+  .cities-modal__info {
     padding: 60px 12px 50px 12px;
   }
   .cards,
@@ -2744,7 +2747,9 @@ body {
   .fooled__info-text,
   .fooled__info-list li,
   .fooled-modal__info-text,
-  .article-modal__info-text {
+  .article-modal__info-text,
+  .cities-modal__info-input,
+  .cities-modal__info-item {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2752,7 +2757,9 @@ body {
   .fooled__info-text a,
   .fooled__info-list li a,
   .fooled-modal__info-text a,
-  .article-modal__info-text a {
+  .article-modal__info-text a,
+  .cities-modal__info-input a,
+  .cities-modal__info-item a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2886,6 +2893,9 @@ body {
   .contacts-modal__info-socials {
     max-width: 250px;
     margin: 0 auto;
+  }
+  .cities-modal__info-items {
+    height: 185px;
   }
 }
 @media screen and (max-width: 550px) {
