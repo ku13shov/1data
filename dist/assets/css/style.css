@@ -536,6 +536,9 @@ body {
   flex-direction: column;
   gap: 24px;
   position: relative;
+  margin: 0 auto;
+  max-width: 360px;
+  width: 100%;
 }
 .contacts-modal__info-phone, .contacts-modal__info-email {
   color: #001333;
@@ -613,6 +616,7 @@ body {
   position: relative;
   max-width: 485px;
   width: 100%;
+  margin: 0 auto;
 }
 .cities-modal__info-wrapper,
 .fooled-modal__info-wrapper {
@@ -1731,6 +1735,7 @@ body {
   max-width: 920px;
   width: 100%;
   padding: 60px 50px 95px 50px;
+  margin: 0 auto;
 }
 .fooled-modal__info-title {
   color: #001333;
@@ -2377,6 +2382,7 @@ body {
   max-width: 920px;
   width: 100%;
   padding: 60px 50px;
+  margin: 0 auto;
 }
 .article-modal__info-title {
   color: #001333;
@@ -2710,23 +2716,56 @@ body {
   .footer__col.col1 {
     margin-right: 50px;
   }
+  .fooled-modal__info,
+  .article-modal__info {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {
     padding: 0 10px;
   }
   .title,
-  .fooled__text {
+  .fooled__text,
+  .fooled__title,
+  .fooled-modal__info-title {
     font-size: 28px;
     line-height: 99.99%;
     margin-bottom: 20px;
+  }
+  .article-modal__info-title {
+    font-size: 20px;
+    line-height: 143.99%;
+  }
+  .article-modal__info,
+  .fooled-modal__info,
+  .contacts-modal__info {
+    padding: 60px 12px 50px 12px;
   }
   .cards,
   .fooled {
     padding-top: 185px;
   }
+  .fooled__info-text,
+  .fooled__info-list li,
+  .fooled-modal__info-text,
+  .article-modal__info-text {
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.14px;
+  }
+  .fooled__info-text a,
+  .fooled__info-list li a,
+  .fooled-modal__info-text a,
+  .article-modal__info-text a {
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.14px;
+  }
   .breadcrumbs {
     margin-top: 10px;
+    margin-bottom: 15px;
   }
   .header__wrapper {
     -ms-flex-wrap: wrap;
@@ -2815,6 +2854,10 @@ body {
     line-height: 160%;
     letter-spacing: 0.14px;
   }
+  .fooled__info-text.super-bold, .fooled__info-text.medium-bold {
+    font-size: 20px;
+    line-height: 143.99%;
+  }
   .footer__wrapper {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2838,6 +2881,17 @@ body {
   .footer__col.col1 {
     margin-right: 0px;
     max-width: 800px;
+  }
+  .contacts-modal__info {
+    text-align: center;
+  }
+  .contacts-modal__info-phone, .contacts-modal__info-email {
+    font-size: 20px;
+    line-height: 143.99%;
+  }
+  .contacts-modal__info-socials {
+    max-width: 250px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 550px) {
@@ -2869,6 +2923,18 @@ body {
   }
   .navigation.hidden {
     top: 64px;
+  }
+  .breadcrumbs {
+    overflow-x: auto;
+    display: -webkit-box;
+  }
+  .breadcrumbs::-webkit-scrollbar {
+    display: none;
+  }
+  .breadcrumbs-link {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .cards__items {
     grid-template-columns: 1fr;
