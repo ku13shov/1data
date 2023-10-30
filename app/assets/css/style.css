@@ -2710,9 +2710,35 @@ body {
   .footer__col.col1 {
     margin-right: 50px;
   }
+  .constructor-modal__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .constructor-modal__left, .constructor-modal__right {
+    width: 100%;
+    padding-top: 50px;
+  }
+  .constructor-modal__container {
+    margin-right: auto;
+  }
+  .constructor-modal__right {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .constructor-modal__right-close {
+    top: -475px;
+  }
+  .constructor-modal__right-close path {
+    fill: #000;
+  }
   .fooled-modal__info,
   .article-modal__info,
-  .cities-modal__info {
+  .cities-modal__info,
+  .entrance-modal__info,
+  .constructor-modal__wrapper {
     max-height: 100vh;
     overflow-y: auto;
   }
@@ -2725,7 +2751,9 @@ body {
   .fooled__text,
   .fooled__title,
   .fooled-modal__info-title,
-  .cities-modal__info-title {
+  .cities-modal__info-title,
+  .entrance-modal__form-title,
+  .constructor-modal__title {
     font-size: 28px;
     line-height: 99.99%;
     margin-bottom: 20px;
@@ -2737,7 +2765,8 @@ body {
   .article-modal__info,
   .fooled-modal__info,
   .contacts-modal__info,
-  .cities-modal__info {
+  .cities-modal__info,
+  .entrance-modal__info {
     padding: 60px 12px 50px 12px;
   }
   .cards,
@@ -2749,7 +2778,10 @@ body {
   .fooled-modal__info-text,
   .article-modal__info-text,
   .cities-modal__info-input,
-  .cities-modal__info-item {
+  .cities-modal__info-item,
+  .entrance-modal__form-text,
+  .constructor-modal__form-input,
+  .constructor-modal__text {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2759,7 +2791,10 @@ body {
   .fooled-modal__info-text a,
   .article-modal__info-text a,
   .cities-modal__info-input a,
-  .cities-modal__info-item a {
+  .cities-modal__info-item a,
+  .entrance-modal__form-text a,
+  .constructor-modal__form-input a,
+  .constructor-modal__text a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2897,6 +2932,37 @@ body {
   .cities-modal__info-items {
     height: 185px;
   }
+  .entrance-modal__form-title {
+    margin-bottom: 10px;
+  }
+  .entrance-modal__form-text {
+    margin-bottom: 20px;
+  }
+  .constructor-modal__title {
+    margin-bottom: 10px;
+  }
+  .constructor-modal__text {
+    margin-bottom: 20px;
+  }
+  .constructor-modal__left, .constructor-modal__right {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .constructor-modal__left {
+    padding-top: 90px;
+  }
+  .constructor-modal__right-close {
+    top: -410px;
+  }
+  .constructor-modal__form-checkbox label {
+    margin-bottom: 20px;
+  }
+  .constructor-modal__form-checkbox label a {
+    font-size: 10px;
+  }
+  .constructor-modal__form-input {
+    padding: 0 10px;
+  }
 }
 @media screen and (max-width: 550px) {
   .header {
@@ -2945,6 +3011,12 @@ body {
   }
   .footer__phone, .footer__email, .footer__oferta {
     margin-right: 160px;
+  }
+  .constructor-modal__left {
+    padding-top: 140px;
+  }
+  .constructor-modal__right-close {
+    display: none;
   }
 }
 @media screen and (max-width: 390px) {

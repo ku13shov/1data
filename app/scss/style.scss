@@ -2854,10 +2854,40 @@ body {
         }
     }
 
+    .constructor-modal {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__left,
+        &__right {
+            width: 100%;
+            padding-top: 50px;
+        }
+
+        &__container {
+            margin-right: auto;
+        }
+
+        &__right {
+            justify-content: center;
+
+            &-close {
+                top: -475px;
+
+                path {
+                    fill: #000;
+                }
+            }
+        }
+    }
+
     // modals height
     .fooled-modal__info,
     .article-modal__info,
-    .cities-modal__info {
+    .cities-modal__info,
+    .entrance-modal__info,
+    .constructor-modal__wrapper {
         max-height: 100vh;
         overflow-y: auto;
     }
@@ -2873,7 +2903,9 @@ body {
     .fooled__text,
     .fooled__title,
     .fooled-modal__info-title,
-    .cities-modal__info-title {
+    .cities-modal__info-title,
+    .entrance-modal__form-title,
+    .constructor-modal__title {
         font-size: 28px;
         line-height: 99.99%;
         margin-bottom: 20px;
@@ -2888,7 +2920,8 @@ body {
     .article-modal__info,
     .fooled-modal__info,
     .contacts-modal__info,
-    .cities-modal__info {
+    .cities-modal__info,
+    .entrance-modal__info {
         padding: 60px 12px 50px 12px;
     }
 
@@ -2903,7 +2936,10 @@ body {
     .fooled-modal__info-text,
     .article-modal__info-text,
     .cities-modal__info-input,
-    .cities-modal__info-item {
+    .cities-modal__info-item,
+    .entrance-modal__form-text,
+    .constructor-modal__form-input,
+    .constructor-modal__text {
         font-size: 14px;
         line-height: 160%;
         letter-spacing: 0.14px;
@@ -3084,7 +3120,8 @@ body {
         &__info {
             text-align: center;
 
-            &-phone, &-email {
+            &-phone,
+            &-email {
                 font-size: 20px;
                 line-height: 143.99%;
             }
@@ -3098,6 +3135,54 @@ body {
 
     .cities-modal__info-items {
         height: 185px;
+    }
+
+    .entrance-modal {
+        &__form-title {
+            margin-bottom: 10px;
+        }
+
+        &__form-text {
+            margin-bottom: 20px;
+        }
+    }
+
+    .constructor-modal {
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__left,
+        &__right {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        &__left {
+            padding-top: 90px;
+        }
+
+        &__right {
+            &-close {
+                top: -410px;
+            }
+        }
+
+        &__form-checkbox label {
+            margin-bottom: 20px;
+
+            a {
+                font-size: 10px;
+            }
+        }
+
+        &__form-input {
+            padding: 0 10px;
+        }
     }
 }
 
@@ -3163,6 +3248,18 @@ body {
         &__email,
         &__oferta {
             margin-right: 160px;
+        }
+    }
+
+    .constructor-modal {
+        &__left {
+            padding-top: 140px;
+        }
+
+        &__right {
+            &-close {
+                display: none;
+            }
         }
     }
 }
