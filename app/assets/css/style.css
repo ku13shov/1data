@@ -2445,12 +2445,6 @@ body {
   max-width: 650px;
   width: 100%;
   padding: 40px;
-  left: 0;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   margin: 0 auto;
 }
 .entrance-modal__info-close {
