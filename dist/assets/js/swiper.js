@@ -16,6 +16,21 @@ const swiperDocs = new Swiper('.legally__swiper', {
     scrollbar: {
         el: ".swiper-scrollbar",
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        550: {
+            slidesPerView: 2,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        1023: {
+            slidesPerView: 4,
+        },
+    },
 });
 
 // Слайдер в каталоге

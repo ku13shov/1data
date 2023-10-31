@@ -5,6 +5,8 @@ const entranceModal = document.querySelector('.entrance-modal');
 const entranceModalCode = document.querySelector('.entrance-modal.code');
 const leaveFeedback = document.querySelector('#leave-feedback');
 const entranceSubmit = document.querySelector('.entrance-modal__form-submit');
+const entranceConstructorSubmit = document.querySelector('.constructor-modal__form-btn');
+const entranceConstructorModal = document.querySelector('.constructor-modal');
 
 const showOrCloseEntranceModal = (HtmlElement) => {
     const body = document.querySelector('body');
@@ -64,6 +66,13 @@ entranceSubmit.addEventListener('click', (e) => {
 
     showOrCloseEntranceModal(entranceModalCode);
     showOrCloseEntranceModal(entranceModal);
+});
+
+entranceConstructorSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    showOrCloseEntranceModal(entranceModalCode);
+    showOrCloseEntranceModal(entranceConstructorModal);
 });
 
 // Используем Inputmask для создания маски номера телефона

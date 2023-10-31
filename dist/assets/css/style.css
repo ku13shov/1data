@@ -2753,7 +2753,15 @@ body {
   .fooled-modal__info-title,
   .cities-modal__info-title,
   .entrance-modal__form-title,
-  .constructor-modal__title {
+  .constructor-modal__title,
+  .decoration__title,
+  .landscaping__title,
+  .installments__title,
+  .about__title,
+  .granit__title,
+  .legally__title,
+  .contacts__title,
+  .reviews__title {
     font-size: 28px;
     line-height: 99.99%;
     margin-bottom: 20px;
@@ -2762,16 +2770,27 @@ body {
     font-size: 20px;
     line-height: 143.99%;
   }
-  .article-modal__info,
-  .fooled-modal__info,
-  .contacts-modal__info,
-  .cities-modal__info,
-  .entrance-modal__info {
-    padding: 60px 12px 50px 12px;
-  }
   .cards,
-  .fooled {
+  .fooled,
+  .decoration,
+  .landscaping,
+  .installments,
+  .about,
+  .granit,
+  .legally,
+  .contacts,
+  .reviews {
     padding-top: 185px;
+  }
+  .decoration__info-title,
+  .landscaping__info-title,
+  .installments__info-title,
+  .granit__info-title,
+  .legally__info-title,
+  .legally__form-title,
+  .contacts__info-title {
+    font-size: 20px;
+    line-height: 143.99%;
   }
   .fooled__info-text,
   .fooled__info-list li,
@@ -2781,7 +2800,31 @@ body {
   .cities-modal__info-item,
   .entrance-modal__form-text,
   .constructor-modal__form-input,
-  .constructor-modal__text {
+  .constructor-modal__text,
+  .decoration__info-text,
+  .decoration__info-list li,
+  .landscaping__info-bluetext,
+  .landscaping__info-text,
+  .landscaping__info-list li,
+  .installments__info-text,
+  .installments__info-text span,
+  .installments__info-bluetext,
+  .installments__info-list li,
+  .about__info-text,
+  .about__info-attention,
+  .granit__info-text,
+  .granit__info-list li,
+  .legally__info-text,
+  .legally__form-text,
+  .legally__form-input,
+  .legally__form-textarea,
+  .legally__form-choose label,
+  .legally__info-list li,
+  .contacts__info-text,
+  .reviews__bluetext,
+  .reviews__text,
+  .reviews__box-title,
+  .reviews__box-text {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2794,10 +2837,41 @@ body {
   .cities-modal__info-item a,
   .entrance-modal__form-text a,
   .constructor-modal__form-input a,
-  .constructor-modal__text a {
+  .constructor-modal__text a,
+  .decoration__info-text a,
+  .decoration__info-list li a,
+  .landscaping__info-bluetext a,
+  .landscaping__info-text a,
+  .landscaping__info-list li a,
+  .installments__info-text a,
+  .installments__info-text span a,
+  .installments__info-bluetext a,
+  .installments__info-list li a,
+  .about__info-text a,
+  .about__info-attention a,
+  .granit__info-text a,
+  .granit__info-list li a,
+  .legally__info-text a,
+  .legally__form-text a,
+  .legally__form-input a,
+  .legally__form-textarea a,
+  .legally__form-choose label a,
+  .legally__info-list li a,
+  .contacts__info-text a,
+  .reviews__bluetext a,
+  .reviews__text a,
+  .reviews__box-title a,
+  .reviews__box-text a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
+  }
+  .article-modal__info,
+  .fooled-modal__info,
+  .contacts-modal__info,
+  .cities-modal__info,
+  .entrance-modal__info {
+    padding: 60px 12px 50px 12px;
   }
   .breadcrumbs {
     margin-top: 10px;
@@ -2963,6 +3037,19 @@ body {
   .constructor-modal__form-input {
     padding: 0 10px;
   }
+  .landscaping__info-images {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .legally__form-input {
+    padding: 0 10px;
+    height: 45px;
+  }
+  .legally__form-textarea {
+    height: 150px;
+    padding: 12px 10px;
+  }
 }
 @media screen and (max-width: 550px) {
   .header {
@@ -2982,10 +3069,27 @@ body {
     flex-wrap: wrap;
     height: 110px;
   }
-  .cards,
-  .fooled {
-    padding-top: 230px;
+  .header__right {
+    max-width: 150px;
+  }
+  .header__location svg, .header__phone svg {
+    height: 30px;
+    width: 30px;
+  }
+  .cards {
     margin-bottom: 24px;
+  }
+  .cards,
+  .fooled,
+  .decoration,
+  .landscaping,
+  .installments,
+  .about,
+  .granit,
+  .legally,
+  .contacts,
+  .reviews {
+    padding-top: 230px;
   }
   .navigation {
     top: 189px;
@@ -3017,6 +3121,10 @@ body {
   }
   .constructor-modal__right-close {
     display: none;
+  }
+  .about__tabs {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 390px) {

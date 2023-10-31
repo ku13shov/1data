@@ -2905,7 +2905,15 @@ body {
     .fooled-modal__info-title,
     .cities-modal__info-title,
     .entrance-modal__form-title,
-    .constructor-modal__title {
+    .constructor-modal__title,
+    .decoration__title,
+    .landscaping__title,
+    .installments__title,
+    .about__title,
+    .granit__title,
+    .legally__title,
+    .contacts__title,
+    .reviews__title {
         font-size: 28px;
         line-height: 99.99%;
         margin-bottom: 20px;
@@ -2916,18 +2924,30 @@ body {
         line-height: 143.99%;
     }
 
-    // modal padding
-    .article-modal__info,
-    .fooled-modal__info,
-    .contacts-modal__info,
-    .cities-modal__info,
-    .entrance-modal__info {
-        padding: 60px 12px 50px 12px;
+    // blocks padding
+    .cards,
+    .fooled,
+    .decoration,
+    .landscaping,
+    .installments,
+    .about,
+    .granit,
+    .legally,
+    .contacts,
+    .reviews {
+        padding-top: 185px;
     }
 
-    .cards,
-    .fooled {
-        padding-top: 185px;
+    // fz20
+    .decoration__info-title,
+    .landscaping__info-title,
+    .installments__info-title,
+    .granit__info-title,
+    .legally__info-title,
+    .legally__form-title,
+    .contacts__info-title {
+        font-size: 20px;
+        line-height: 143.99%;
     }
 
     // texts
@@ -2939,7 +2959,31 @@ body {
     .cities-modal__info-item,
     .entrance-modal__form-text,
     .constructor-modal__form-input,
-    .constructor-modal__text {
+    .constructor-modal__text,
+    .decoration__info-text,
+    .decoration__info-list li,
+    .landscaping__info-bluetext,
+    .landscaping__info-text,
+    .landscaping__info-list li,
+    .installments__info-text,
+    .installments__info-text span,
+    .installments__info-bluetext,
+    .installments__info-list li,
+    .about__info-text,
+    .about__info-attention,
+    .granit__info-text,
+    .granit__info-list li,
+    .legally__info-text,
+    .legally__form-text,
+    .legally__form-input,
+    .legally__form-textarea,
+    .legally__form-choose label,
+    .legally__info-list li,
+    .contacts__info-text,
+    .reviews__bluetext,
+    .reviews__text,
+    .reviews__box-title,
+    .reviews__box-text {
         font-size: 14px;
         line-height: 160%;
         letter-spacing: 0.14px;
@@ -2949,6 +2993,15 @@ body {
             line-height: 160%;
             letter-spacing: 0.14px;
         }
+    }
+
+    // modal padding
+    .article-modal__info,
+    .fooled-modal__info,
+    .contacts-modal__info,
+    .cities-modal__info,
+    .entrance-modal__info {
+        padding: 60px 12px 50px 12px;
     }
 
     .breadcrumbs {
@@ -3184,6 +3237,21 @@ body {
             padding: 0 10px;
         }
     }
+
+    .landscaping__info-images {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .legally__form-input {
+        padding: 0 10px;
+        height: 45px;
+    }
+
+    .legally__form-textarea {
+        height: 150px;
+        padding: 12px 10px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -3207,12 +3275,35 @@ body {
             flex-wrap: wrap;
             height: 110px;
         }
+
+        &__right {
+            max-width: 150px;
+        }
+
+        &__location,
+        &__phone {
+            svg {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    .cards {
+        margin-bottom: 24px;
     }
 
     .cards,
-    .fooled {
+    .fooled,
+    .decoration,
+    .landscaping,
+    .installments,
+    .about,
+    .granit,
+    .legally,
+    .contacts,
+    .reviews {
         padding-top: 230px;
-        margin-bottom: 24px;
     }
 
     .navigation {
@@ -3261,6 +3352,10 @@ body {
                 display: none;
             }
         }
+    }
+
+    .about__tabs {
+        flex-wrap: wrap;
     }
 }
 
