@@ -1042,6 +1042,7 @@ body {
 
             &.right {
                 font-size: 16px;
+                text-align: right;
             }
 
             &.size {
@@ -2831,6 +2832,12 @@ body {
     }
 }
 
+@media screen and (max-width: 1279px) {
+    .catalog__item-img {
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .header {
         &__right {
@@ -2882,6 +2889,29 @@ body {
         }
     }
 
+    .detail {
+        .card {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card__info {
+            max-width: 550px;
+        }
+        
+        .tabs__btns {
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .tabs__btn {
+           flex: 0 0 max-content;
+        }
+    }
+
     // modals height
     .fooled-modal__info,
     .article-modal__info,
@@ -2913,7 +2943,8 @@ body {
     .granit__title,
     .legally__title,
     .contacts__title,
-    .reviews__title {
+    .reviews__title,
+    .catalog__title {
         font-size: 28px;
         line-height: 99.99%;
         margin-bottom: 20px;
@@ -2934,7 +2965,9 @@ body {
     .granit,
     .legally,
     .contacts,
-    .reviews {
+    .reviews,
+    .catalog,
+    .detail {
         padding-top: 185px;
     }
 
@@ -2983,7 +3016,14 @@ body {
     .reviews__bluetext,
     .reviews__text,
     .reviews__box-title,
-    .reviews__box-text {
+    .reviews__box-text,
+    .catalog__info-text,
+    .catalog__info-link,
+    .detail .card__info-text.bold,
+    .detail .card__info-text.installment,
+    .detail .card__info-btn,
+    .detail .tabs__btn,
+    .detail .tabs__info-text {
         font-size: 14px;
         line-height: 160%;
         letter-spacing: 0.14px;
@@ -3252,6 +3292,10 @@ body {
         height: 150px;
         padding: 12px 10px;
     }
+
+    .catalog__swiper-pagination .swiper-pagination-bullet {
+        width: 25px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -3302,7 +3346,9 @@ body {
     .granit,
     .legally,
     .contacts,
-    .reviews {
+    .reviews,
+    .catalog,
+    .detail {
         padding-top: 230px;
     }
 
@@ -3356,6 +3402,57 @@ body {
 
     .about__tabs {
         flex-wrap: wrap;
+    }
+
+    .catalog {
+        &__filters-row {
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        &__filters-item a {
+            width: max-content;
+        }
+
+        &__item {
+            /*height: 453px;*/
+        }
+
+        &__swiper {
+            padding-bottom: 45px;
+
+            .swiper-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .swiper-slide {
+                max-width: 400px;
+                width: 100%;
+            }
+        }
+
+        &__swiper-button-prev,
+        &__swiper-button-next {
+            display: none;
+        }
+    }
+
+    .detail__installment-items {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    .detail .card__info-options {
+        gap: 10px;
+    }
+
+    .detail .card {
+        margin-bottom: 30px;
     }
 }
 

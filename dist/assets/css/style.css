@@ -1101,6 +1101,7 @@ body {
 }
 .catalog__item-text.right {
   font-size: 16px;
+  text-align: right;
 }
 .catalog__item-text.size {
   font-size: 12px;
@@ -2696,6 +2697,11 @@ body {
     opacity: 1;
   }
 }
+@media screen and (max-width: 1279px) {
+  .catalog__item-img {
+    height: auto;
+  }
+}
 @media screen and (max-width: 1023px) {
   .header__right {
     max-width: 170px;
@@ -2734,6 +2740,29 @@ body {
   .constructor-modal__right-close path {
     fill: #000;
   }
+  .detail .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .detail .card__info {
+    max-width: 550px;
+  }
+  .detail .tabs__btns {
+    overflow-x: auto;
+  }
+  .detail .tabs__btns::-webkit-scrollbar {
+    display: none;
+  }
+  .detail .tabs__btn {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 max-content;
+    flex: 0 0 max-content;
+  }
   .fooled-modal__info,
   .article-modal__info,
   .cities-modal__info,
@@ -2761,7 +2790,8 @@ body {
   .granit__title,
   .legally__title,
   .contacts__title,
-  .reviews__title {
+  .reviews__title,
+  .catalog__title {
     font-size: 28px;
     line-height: 99.99%;
     margin-bottom: 20px;
@@ -2779,7 +2809,9 @@ body {
   .granit,
   .legally,
   .contacts,
-  .reviews {
+  .reviews,
+  .catalog,
+  .detail {
     padding-top: 185px;
   }
   .decoration__info-title,
@@ -2824,7 +2856,14 @@ body {
   .reviews__bluetext,
   .reviews__text,
   .reviews__box-title,
-  .reviews__box-text {
+  .reviews__box-text,
+  .catalog__info-text,
+  .catalog__info-link,
+  .detail .card__info-text.bold,
+  .detail .card__info-text.installment,
+  .detail .card__info-btn,
+  .detail .tabs__btn,
+  .detail .tabs__info-text {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2861,7 +2900,14 @@ body {
   .reviews__bluetext a,
   .reviews__text a,
   .reviews__box-title a,
-  .reviews__box-text a {
+  .reviews__box-text a,
+  .catalog__info-text a,
+  .catalog__info-link a,
+  .detail .card__info-text.bold a,
+  .detail .card__info-text.installment a,
+  .detail .card__info-btn a,
+  .detail .tabs__btn a,
+  .detail .tabs__info-text a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -3050,6 +3096,9 @@ body {
     height: 150px;
     padding: 12px 10px;
   }
+  .catalog__swiper-pagination .swiper-pagination-bullet {
+    width: 25px;
+  }
 }
 @media screen and (max-width: 550px) {
   .header {
@@ -3088,7 +3137,9 @@ body {
   .granit,
   .legally,
   .contacts,
-  .reviews {
+  .reviews,
+  .catalog,
+  .detail {
     padding-top: 230px;
   }
   .navigation {
@@ -3125,6 +3176,54 @@ body {
   .about__tabs {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .catalog__filters-row {
+    overflow-x: auto;
+  }
+  .catalog__filters-row::-webkit-scrollbar {
+    display: none;
+  }
+  .catalog__filters-item a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .catalog__item {
+    /*height: 453px;*/
+  }
+  .catalog__swiper {
+    padding-bottom: 45px;
+  }
+  .catalog__swiper .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .catalog__swiper .swiper-slide {
+    max-width: 400px;
+    width: 100%;
+  }
+  .catalog__swiper-button-prev, .catalog__swiper-button-next {
+    display: none;
+  }
+  .detail__installment-items {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .detail .card__info-options {
+    gap: 10px;
+  }
+  .detail .card {
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 390px) {
