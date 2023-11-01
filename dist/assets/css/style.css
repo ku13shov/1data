@@ -1071,6 +1071,7 @@ body {
 .catalog__item-img {
   margin-bottom: 10px;
   height: 243px;
+  text-align: center;
 }
 .catalog__item-img a {
   display: inline-block;
@@ -1301,6 +1302,8 @@ body {
   text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  border: none;
+  cursor: pointer;
 }
 .detail .card__info-btn.order {
   margin-top: 14px;
@@ -2863,7 +2866,9 @@ body {
   .detail .card__info-text.installment,
   .detail .card__info-btn,
   .detail .tabs__btn,
-  .detail .tabs__info-text {
+  .detail .tabs__info-text,
+  .catalog__item-text,
+  .catalog__item-text.right {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2907,7 +2912,9 @@ body {
   .detail .card__info-text.installment a,
   .detail .card__info-btn a,
   .detail .tabs__btn a,
-  .detail .tabs__info-text a {
+  .detail .tabs__info-text a,
+  .catalog__item-text a,
+  .catalog__item-text.right a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -3099,6 +3106,9 @@ body {
   .catalog__swiper-pagination .swiper-pagination-bullet {
     width: 25px;
   }
+  .catalog__item-info {
+    height: 27px;
+  }
 }
 @media screen and (max-width: 550px) {
   .header {
@@ -3179,6 +3189,7 @@ body {
   }
   .catalog__filters-row {
     overflow-x: auto;
+    scrollbar-width: none;
   }
   .catalog__filters-row::-webkit-scrollbar {
     display: none;
