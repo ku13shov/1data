@@ -2593,6 +2593,76 @@ body {
   max-width: 100px;
   width: 100%;
 }
+.reviews__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+  padding: 24px 0;
+}
+.reviews__form-title {
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+.reviews__form-input, .reviews__form-textarea {
+  height: 50px;
+  padding: 0 30px;
+  color: #001333;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border: 1px solid #5a7794;
+  background: #fff;
+  outline-color: #0085ff;
+}
+.reviews__form-input::-webkit-input-placeholder, .reviews__form-textarea::-webkit-input-placeholder {
+  color: #5a7794;
+}
+.reviews__form-input::-moz-placeholder, .reviews__form-textarea::-moz-placeholder {
+  color: #5a7794;
+}
+.reviews__form-input:-ms-input-placeholder, .reviews__form-textarea:-ms-input-placeholder {
+  color: #5a7794;
+}
+.reviews__form-input::-ms-input-placeholder, .reviews__form-textarea::-ms-input-placeholder {
+  color: #5a7794;
+}
+.reviews__form-input::placeholder, .reviews__form-textarea::placeholder {
+  color: #5a7794;
+}
+.reviews__form-textarea {
+  height: 210px;
+  padding: 15px 30px;
+  resize: none;
+}
+.reviews__form-submit {
+  height: 46px;
+  max-width: 240px;
+  width: 100%;
+  background-color: #001333;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
 
 /* Footer */
 .footer {
@@ -2823,7 +2893,8 @@ body {
   .granit__info-title,
   .legally__info-title,
   .legally__form-title,
-  .contacts__info-title {
+  .contacts__info-title,
+  .reviews__form-title {
     font-size: 20px;
     line-height: 143.99%;
   }
@@ -2868,7 +2939,9 @@ body {
   .detail .tabs__btn,
   .detail .tabs__info-text,
   .catalog__item-text,
-  .catalog__item-text.right {
+  .catalog__item-text.right,
+  .reviews__form-input,
+  .reviews__form-textarea {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -2914,7 +2987,9 @@ body {
   .detail .tabs__btn a,
   .detail .tabs__info-text a,
   .catalog__item-text a,
-  .catalog__item-text.right a {
+  .catalog__item-text.right a,
+  .reviews__form-input a,
+  .reviews__form-textarea a {
     font-size: 14px;
     line-height: 160%;
     letter-spacing: 0.14px;
@@ -3108,6 +3183,13 @@ body {
   }
   .catalog__item-info {
     height: 27px;
+  }
+  .reviews__form-input {
+    height: 45px;
+    padding: 0 10px;
+  }
+  .reviews__form-textarea {
+    padding: 10px;
   }
 }
 @media screen and (max-width: 550px) {
