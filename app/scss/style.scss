@@ -538,6 +538,7 @@ body {
             font-weight: 700;
             line-height: normal;
             text-decoration-line: underline;
+            text-align: center;
         }
 
         &-socials {
@@ -580,7 +581,8 @@ body {
 }
 
 .cities-modal,
-.fooled-modal {
+.fooled-modal,
+.question-modal {
     position: fixed;
     left: 0;
     width: 100%;
@@ -1740,7 +1742,8 @@ body {
     }
 }
 
-.fooled-modal {
+.fooled-modal,
+.question-modal {
     &__info {
         max-width: 920px;
         width: 100%;
@@ -2611,6 +2614,48 @@ body {
     }
 }
 
+.question-modal {
+    &__info {
+        max-width: 496px;
+        padding: 40px;
+        text-align: center;
+
+        &-title {
+            margin-bottom: 4px;
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 160%;
+            padding-left: 0;
+            max-width: 260px;
+            width: 100%;
+            margin: 0 auto 28px auto;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &-btn {
+            color: #fff;
+            text-align: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 3.6px;
+            text-transform: uppercase;
+            width: 120px;
+            height: 56px;
+            background-color: #001333;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
 /* reviews page */
 .reviews {
     padding-top: 125px;
@@ -2986,6 +3031,65 @@ body {
     }
 }
 
+@media screen and (max-width: 920px) {
+    .header {
+        &__wrapper {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        &__wrapper.hidden {
+            row-gap: 0;
+        }
+
+        &__buttons {
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        &__buttons.hidden {
+            height: 0;
+        }
+
+        &__buttons-btn.btn1,
+        &__buttons-btn.btn2 {
+            max-width: 100%;
+        }
+    }
+
+    // blocks padding
+    .cards,
+    .fooled,
+    .decoration,
+    .landscaping,
+    .installments,
+    .about,
+    .granit,
+    .legally,
+    .contacts,
+    .reviews,
+    .catalog,
+    .detail {
+        padding-top: 185px;
+    }
+
+    .navigation {
+        top: 144px;
+        padding: 10px 0;
+
+        &.hidden {
+            top: 74px;
+        }
+    }
+
+    .constructor-modal__left {
+        padding-top: 110px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .container {
         padding: 0 10px;
@@ -3016,22 +3120,6 @@ body {
     .article-modal__info-title {
         font-size: 20px;
         line-height: 143.99%;
-    }
-
-    // blocks padding
-    .cards,
-    .fooled,
-    .decoration,
-    .landscaping,
-    .installments,
-    .about,
-    .granit,
-    .legally,
-    .contacts,
-    .reviews,
-    .catalog,
-    .detail {
-        padding-top: 185px;
     }
 
     // fz20
@@ -3380,7 +3468,7 @@ body {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 620px) {
     .header {
         padding: 10px 0;
 
@@ -3389,11 +3477,11 @@ body {
         }
 
         &__buttons-btn.btn1 {
-            max-width: 550px;
+            max-width: 100%;
         }
 
         &__buttons-btn.btn2 {
-            max-width: 550px;
+            max-width: 100%;
         }
 
         &__buttons {
@@ -3466,7 +3554,7 @@ body {
         &__phone,
         &__email,
         &__oferta {
-            margin-right: 160px;
+            margin-right: 185px;
         }
     }
 
